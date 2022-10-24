@@ -1,0 +1,11 @@
+.Navbar {
+    align-content: flex-start;
+    height: max-content;
+}
+
+.navbar-links {
+    margin: 0.7em;
+    text-decoration: none;
+    color: royalblue;
+
+}

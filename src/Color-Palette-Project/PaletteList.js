@@ -1,7 +1,7 @@
 import React from "react";
 import MiniPalette from "./MiniPalette";
 import { makeStyles } from "tss-react/mui";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function PaletteList(props) {
   const { palettes } = props;
@@ -47,9 +47,15 @@ function PaletteList(props) {
           <h1>Color Palettes</h1>
         </nav>
         <div className={classes.palettes}>
-          {palettes.map((palette) => {
-            return <MiniPalette {...palette} key={palette.id} />;
-          })}
+          {palettes.map((palette) => (
+            <Link
+              to={`/palette/${palette.id}`}
+              style={{ textDecoration: "none" }}
+              key={palette.id}
+            >
+              <MiniPalette {...palette} key={palette.id} />
+            </Link>
+          ))}
         </div>
       </div>
     </div>
