@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./HomePage.css";
+import "./HomeBackground.css";
 
 export class HomeBackground extends Component {
   render() {

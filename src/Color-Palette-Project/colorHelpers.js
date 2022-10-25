@@ -54,7 +54,7 @@ const SingleColorWrapper = () => {
     <SingleColorPalette
       paletteId={paletteId}
       colorId={colorId}
-      palette={generatePalette(seedColors[4])}
+      palette={generatePalette(findPalette(paletteId))}
     />
   );
 };
