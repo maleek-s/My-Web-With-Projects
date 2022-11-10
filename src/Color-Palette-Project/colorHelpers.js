@@ -1,9 +1,4 @@
-import React from "react";
 import chroma from "chroma-js";
-import { useParams } from "react-router-dom";
-import seedColors from "./seedColors";
-import Palette from "./Palette";
-import SingleColorPalette from "./SingleColorPalette";
 
 const levels = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 
@@ -43,26 +38,4 @@ function getScale(hexColor, numberOfColors) {
   return chroma.scale(getRange(hexColor)).mode("lab").colors(numberOfColors);
 }
 
-const PaletteWrapper = () => {
-  const { id } = useParams();
-  return <Palette id={id} palette={generatePalette(findPalette(id))} />;
-};
-
-const SingleColorWrapper = () => {
-  const { paletteId, colorId } = useParams();
-  return (
-    <SingleColorPalette
-      paletteId={paletteId}
-      colorId={colorId}
-      palette={generatePalette(findPalette(paletteId))}
-    />
-  );
-};
-
-function findPalette(id) {
-  return seedColors.find((palette) => {
-    return palette.id === id;
-  });
-}
-
-export { generatePalette, PaletteWrapper, SingleColorWrapper, findPalette };
+export { generatePalette };

@@ -11,6 +11,9 @@ function Navbar() {
       <Link className="navbar-links" to="/palette">
         Color Palettes
       </Link>
+      <Link className="navbar-links" to="/synonym-game">
+        Synonym Guessing Game
+      </Link>
     </div>
   );
 }

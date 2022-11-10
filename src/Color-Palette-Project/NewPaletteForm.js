@@ -15,6 +15,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { ChromePicker } from "react-color";
 import Button from "@mui/material/Button";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 400;
 
@@ -64,12 +65,13 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-function NewPaletteForm() {
+function NewPaletteForm(props) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [currentColor, setCurrentColor] = useState("teal");
   const [colorsArr, setColorsArr] = useState([{ color: "blue", name: "blue" }]);
   const [newName, setNewName] = useState("");
+  const [newPaletteName, setNewPaletteName] = useState("");
 
   useEffect(() => {
     ValidatorForm.addValidationRule("isColorNameUnique", (value) => {
@@ -79,6 +81,11 @@ function NewPaletteForm() {
     });
     ValidatorForm.addValidationRule("isColorUnique", (value) => {
       return colorsArr.every(({ color }) => color !== currentColor);
+    });
+    ValidatorForm.addValidationRule("isPaletteNameUnique", (value) => {
+      return props.palettes.every(
+        ({ paletteName }) => paletteName.toLowerCase() !== value.toLowerCase()
+      );
     });
   });
 
@@ -104,10 +111,32 @@ function NewPaletteForm() {
     setNewName(evt.target.value);
   };
 
+  const handlePaletteNameChange = (evt) => {
+    setNewPaletteName(evt.target.value);
+  };
+
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    let newName = newPaletteName;
+    const newPalette = {
+      paletteName: newName,
+      colors: [...colorsArr],
+      id: newName.toLowerCase().replace(/ /g, "-"),
+      emoji: "🎨",
+    };
+    props.savePalette(newPalette);
+    navigate("/palette");
+  };
+
+  const removeColor = (colorName) => {
+    setColorsArr(colorsArr.filter((color) => color.name !== colorName));
+  };
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} color="default">
         <Toolbar>
           <IconButton
             color="inherit"
@@ -121,6 +150,21 @@ function NewPaletteForm() {
           <Typography variant="h6" noWrap component="div">
             Persistent drawer
           </Typography>
+          <ValidatorForm onSubmit={handleSubmit}>
+            <TextValidator
+              onChange={handlePaletteNameChange}
+              label="Palette Name"
+              value={newPaletteName}
+              validators={["required", "isPaletteNameUnique"]}
+              errorMessages={[
+                "Enter Palette Name",
+                "Palette Name already used",
+              ]}
+            ></TextValidator>
+            <Button variant="contained" color="primary" type="submit">
+              Save Palette
+            </Button>
+          </ValidatorForm>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -187,8 +231,10 @@ function NewPaletteForm() {
         {colorsArr.map((color) => {
           return (
             <DraggableColorBox
+              key={color.name}
               color={color.color}
               name={color.name}
+              handleClick={() => removeColor(color.name)}
             ></DraggableColorBox>
           );
         })}
