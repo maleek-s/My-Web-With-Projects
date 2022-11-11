@@ -1,11 +1,12 @@
 import "./Synonym-Home.css";
-import Navigation from "./GameNavBar";
+import NavBar from "./GameNavBar";
 import Footer from "./GameFooter";
-
+import Play from "./Play";
 function SynonymHome() {
   return (
     <div>
-      <Navigation></Navigation>
+      <NavBar></NavBar>
+      <Play></Play>
       <Footer />
     </div>
   );
