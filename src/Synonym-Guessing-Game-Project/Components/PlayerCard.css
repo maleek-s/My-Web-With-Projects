@@ -1,0 +1,9 @@
+.PlayerCard{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: white
+}

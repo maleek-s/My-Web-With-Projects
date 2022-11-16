@@ -1,6 +1,8 @@
-import React from "react";
-import Form from "react-bootstrap/Form";
+import React, { useEffect } from "react";
+import Grid from "@mui/material/Unstable_Grid2";
+import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import Button from "react-bootstrap/Button";
+import "./PlayerCard.css";
 
 function PlayerCard(props) {
   // const getData = () => {
@@ -11,22 +13,47 @@ function PlayerCard(props) {
   //     });
   // };
 
+  useEffect(() => {
+    ValidatorForm.addValidationRule("guessInput", (value) => {
+      return value.length > 1;
+    });
+  });
+
   return (
-    <div>
-      <p>{props.nouns}</p>
-      <Form>
-        <Form.Group className="mb-3">
-          <Form.Label htmlFor="inputPassword5">Password</Form.Label>
-          <Form.Control
-            as="textarea"
-            id="inputPassword5"
-            aria-describedby="passwordHelpBlock"
-            onChange={(e) => props.guessInput(e.target.value)}
-          />
-          <Form.Text id="passwordHelpBlock" muted></Form.Text>
-          <Button>JAJA</Button>
-        </Form.Group>
-      </Form>
+    <div className="PlayerCard">
+      <Grid container spacing={1}>
+        <Grid xs={12}>
+          <Button onClick={props.startGame}>Fetch me a Word</Button>
+        </Grid>
+        <Grid xs={12}>
+          <div className="guessForm">
+            <ValidatorForm onSubmit={props.newArr}>
+              <TextValidator
+                fullWidth
+                color="secondary"
+                onChange={(e) => props.guessInput(e.target.value)}
+                label="Guess Input"
+                value={props.value}
+                variant="standard"
+                id="standard-password-input fullWidth"
+                validators={["required", "guessInput"]}
+                errorMessages={["Take a Shot", "Type in something real..."]}
+              ></TextValidator>
+              <Button variant="contained" color="primary" type="submit">
+                Feeling Lucky Punk?
+              </Button>
+            </ValidatorForm>
+          </div>
+        </Grid>
+        <Grid xs={12}>
+          <div className="randWord">
+            <p>{props.randWord}</p>
+          </div>
+          <div>
+            <p>{props.score}</p>
+          </div>
+        </Grid>
+      </Grid>
     </div>
   );
 }
