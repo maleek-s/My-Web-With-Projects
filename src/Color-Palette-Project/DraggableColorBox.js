@@ -17,6 +17,18 @@ function DraggableColorBox(props) {
           color: "white",
           transform: "scale(1.5)",
         },
+        "@media (max-width: 991.98px)": {
+          width: "25%",
+          height: "20%",
+        },
+        "@media (max-width: 767.98px)": {
+          width: "50%",
+          height: "10%",
+        },
+        "@media (max-width: 575.98px)": {
+          width: "100%",
+          height: "5%",
+        },
       },
       boxContent: {
         position: "absolute",

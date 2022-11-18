@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PlayerCard from "./PlayerCard";
 import "./Synonym-Home.css";
+import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // const nouns = [
@@ -108,8 +109,9 @@ const Play = (props) => {
 
   const [randWord, setRandWord] = useState("");
   const [score, setScore] = useState(0);
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(10);
   const [disButton, setDisButton] = useState(false);
+  const [started, setStarted] = useState(false);
 
   const randNum = Math.floor(Math.random() * nouns2.length);
 
@@ -121,8 +123,9 @@ const Play = (props) => {
   const startGame = () => {
     const startRandWord = nouns2[randNum].word;
     setRandWord(startRandWord);
-    setCounter(5);
+    setCounter(10);
     setDisButton(true);
+    setStarted(true);
   };
 
   const updateNouns2 = () => {
@@ -183,17 +186,33 @@ const Play = (props) => {
 
   return (
     <div className="App">
-      <PlayerCard
-        nouns={nouns2}
-        randWord={randWord}
-        newArr={newArr}
-        guessInput={guessInput}
-        score={score}
-        value={inputValue}
-        startGame={startGame}
-        counter={counter}
-        disButton={disButton}
-      ></PlayerCard>
+      {started === false ? (
+        <div>
+          <h3>synonym</h3>
+          <h4>noun</h4>
+          <p> synonym si-nə-ˌnim</p>
+          <p>
+            {" "}
+            : one of two or more words or expressions of the same language that
+            have the same or nearly the same meaning in some or all senses
+          </p>
+          <Button onClick={startGame} disabled={disButton}>
+            Fetch me a Word
+          </Button>
+        </div>
+      ) : (
+        <PlayerCard
+          nouns={nouns2}
+          randWord={randWord}
+          newArr={newArr}
+          guessInput={guessInput}
+          score={score}
+          value={inputValue}
+          startGame={startGame}
+          counter={counter}
+          disButton={disButton}
+        ></PlayerCard>
+      )}
     </div>
   );
 

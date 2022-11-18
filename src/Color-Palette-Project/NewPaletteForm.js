@@ -16,6 +16,7 @@ import { ChromePicker } from "react-color";
 import Button from "@mui/material/Button";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { useNavigate } from "react-router-dom";
+import "./NewPaletteForm.css";
 
 const drawerWidth = 400;
 
@@ -167,12 +168,13 @@ function NewPaletteForm({ maxColors = 20, ...props }) {
             Create a Palette
           </Typography>
         </Toolbar>
-        <div>
+        <div className="formAndBack">
           <ValidatorForm
             onSubmit={handleSubmit}
-            style={{ display: "flex", marginRight: "1em" }}
+            style={{ display: "flex", marginRight: "1em", padding: "10px" }}
           >
             <TextValidator
+              size="small"
               onChange={handlePaletteNameChange}
               label="Palette Name"
               value={newPaletteName}
@@ -182,12 +184,26 @@ function NewPaletteForm({ maxColors = 20, ...props }) {
                 "Palette Name already used",
               ]}
             ></TextValidator>
-            <Button size="xs" variant="contained" color="primary" type="submit">
+            <Button
+              size="small"
+              color="secondary"
+              type="submit"
+              style={{ padding: "0 20px", margin: "0 5px" }}
+            >
               Save Palette
             </Button>
           </ValidatorForm>
-          <Link to="/">
-            <Button variant="contained" color="secondary">
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <Button
+              variant="contained"
+              style={{
+                display: "flex",
+                marginBottom: "15px",
+                marginRight: "3em",
+              }}
+              color="secondary"
+              size="small"
+            >
               Go Back
             </Button>
           </Link>
