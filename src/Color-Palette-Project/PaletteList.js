@@ -21,7 +21,12 @@ function PaletteList(props) {
               style={{ textDecoration: "none" }}
               key={palette.id}
             >
-              <MiniPalette {...palette} key={palette.id} />
+              <MiniPalette
+                {...palette}
+                key={palette.id}
+                handleDelete={props.deletePalette}
+                id={palette.id}
+              />
             </Link>
           ))}
         </div>

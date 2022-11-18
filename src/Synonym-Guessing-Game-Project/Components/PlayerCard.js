@@ -23,7 +23,18 @@ function PlayerCard(props) {
     <div className="PlayerCard">
       <Grid container spacing={1}>
         <Grid xs={12}>
-          <Button onClick={props.startGame}>Fetch me a Word</Button>
+          <Button onClick={props.startGame} disabled={props.disButton}>
+            Fetch me a Word
+          </Button>
+        </Grid>
+        <Grid xs={12}>
+          <div className="counter">Time left</div>
+          <div className="counter">{props.counter}</div>
+        </Grid>
+        <Grid xs={12}>
+          <div className="randWord">
+            <p>{props.randWord}</p>
+          </div>
         </Grid>
         <Grid xs={12}>
           <div className="guessForm">
@@ -38,18 +49,23 @@ function PlayerCard(props) {
                 id="standard-password-input fullWidth"
                 validators={["required", "guessInput"]}
                 errorMessages={["Take a Shot", "Type in something real..."]}
+                disabled={!props.disButton}
               ></TextValidator>
-              <Button variant="contained" color="primary" type="submit">
-                Feeling Lucky Punk?
-              </Button>
+              <Grid>
+                <Button
+                  disabled={!props.disButton}
+                  variant="secondary"
+                  type="submit"
+                >
+                  Feeling Lucky Punk?
+                </Button>
+              </Grid>
             </ValidatorForm>
           </div>
         </Grid>
         <Grid xs={12}>
-          <div className="randWord">
-            <p>{props.randWord}</p>
-          </div>
-          <div>
+          <div className="result">
+            <span>Correct Answers:</span>
             <p>{props.score}</p>
           </div>
         </Grid>

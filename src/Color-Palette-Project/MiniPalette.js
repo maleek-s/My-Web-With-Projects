@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteIcon from "@mui/icons-material/Delete";
 import { makeStyles } from "tss-react/mui";
 
 function MiniPalette(props) {
@@ -12,8 +13,9 @@ function MiniPalette(props) {
         borderRadius: "5px",
         padding: "0.5rem",
         position: "relative",
-        "& hover": {
-          cursor: "pointer",
+        cursor: "pointer",
+        "&:hover svg": {
+          opacity: 1,
         },
       },
       colors: {
@@ -45,6 +47,17 @@ function MiniPalette(props) {
         pisition: "relative",
         marginBottom: "-3.5px",
       },
+      deleteIcon: {
+        color: "white",
+        backgroundColor: "#eb3d30",
+        width: "25px",
+        height: "25px",
+        position: "absolute",
+        right: "0",
+        top: "0",
+        zIndex: 10,
+        opacity: 0,
+      },
     };
   });
 
@@ -58,8 +71,19 @@ function MiniPalette(props) {
     />
   ));
 
+  const deletePalette = (e) => {
+    e.preventDefault();
+    props.handleDelete(props.id);
+  };
+
   return (
     <div className={classes.root}>
+      <DeleteIcon
+        className={classes.deleteIcon}
+        style={{ transition: "all 0.3s ease-in-out" }}
+        onClick={deletePalette}
+      ></DeleteIcon>
+
       <div className={classes.colors}>{miniColorBoxes}</div>
       <h5 className={classes.title}>
         {paletteName} <span className={classes.emoji}>{emoji}</span>

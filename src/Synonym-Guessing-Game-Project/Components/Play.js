@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PlayerCard from "./PlayerCard";
 import "./Synonym-Home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -108,12 +108,21 @@ const Play = (props) => {
 
   const [randWord, setRandWord] = useState("");
   const [score, setScore] = useState(0);
+  const [counter, setCounter] = useState(0);
+  const [disButton, setDisButton] = useState(false);
 
   const randNum = Math.floor(Math.random() * nouns2.length);
+
+  useEffect(() => {
+    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+    counter === 0 ? setDisButton(false) : setDisButton(true);
+  }, [counter]);
 
   const startGame = () => {
     const startRandWord = nouns2[randNum].word;
     setRandWord(startRandWord);
+    setCounter(5);
+    setDisButton(true);
   };
 
   const updateNouns2 = () => {
@@ -182,6 +191,8 @@ const Play = (props) => {
         score={score}
         value={inputValue}
         startGame={startGame}
+        counter={counter}
+        disButton={disButton}
       ></PlayerCard>
     </div>
   );
