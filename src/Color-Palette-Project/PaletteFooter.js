@@ -5,7 +5,6 @@ function PaletteFooter(props) {
 
   return (
     <div>
-      {" "}
       <footer className="Palette-footer">
         {paletteName}
         <span className="emoji">{emoji}</span>

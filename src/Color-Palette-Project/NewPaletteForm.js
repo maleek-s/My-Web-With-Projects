@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import DraggableColorBox from "./DraggableColorBox";
+import NewPalatteColorBox from "./NewPaletteColorBox";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -16,7 +16,8 @@ import { ChromePicker } from "react-color";
 import Button from "@mui/material/Button";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { useNavigate } from "react-router-dom";
-import "./NewPaletteForm.css";
+import seedColors from "./seedColors";
+import { motion } from "framer-motion";
 
 const drawerWidth = 400;
 
@@ -49,7 +50,7 @@ const AppBar = styled(MuiAppBar, {
   }),
   flexDirection: "row",
   justifyContent: "space-between",
-  height: "64px",
+  height: "8vh",
   ...(open && {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: `${drawerWidth}px`,
@@ -73,7 +74,7 @@ function NewPaletteForm({ maxColors = 20, ...props }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [currentColor, setCurrentColor] = useState("teal");
-  const [colorsArr, setColorsArr] = useState(props.palettes[0].colors);
+  const [colorsArr, setColorsArr] = useState(seedColors[0].colors);
   const [newName, setNewName] = useState("");
   const [newPaletteName, setNewPaletteName] = useState("");
 
@@ -151,145 +152,159 @@ function NewPaletteForm({ maxColors = 20, ...props }) {
   const paletteIsFull = colorsArr.length >= maxColors;
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
-      <AppBar position="fixed" open={open} color="default">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{ mr: 2, ...(open && { display: "none" }) }}
-          >
-            <ChevronRightIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Create a Palette
-          </Typography>
-        </Toolbar>
-        <div className="formAndBack">
-          <ValidatorForm
-            onSubmit={handleSubmit}
-            style={{ display: "flex", marginRight: "1em", padding: "10px" }}
-          >
-            <TextValidator
-              size="small"
-              onChange={handlePaletteNameChange}
-              label="Palette Name"
-              value={newPaletteName}
-              validators={["required", "isPaletteNameUnique"]}
-              errorMessages={[
-                "Enter Palette Name",
-                "Palette Name already used",
-              ]}
-            ></TextValidator>
-            <Button
-              size="small"
-              color="secondary"
-              type="submit"
-              style={{ padding: "0 20px", margin: "0 5px" }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+    >
+      <Box sx={{ display: "flex" }}>
+        <CssBaseline />
+        <AppBar position="fixed" open={open} color="default">
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              sx={{ mr: 2, ...(open && { display: "none" }) }}
             >
-              Save Palette
-            </Button>
-          </ValidatorForm>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <Button
-              variant="contained"
-              style={{
-                display: "flex",
-                marginBottom: "15px",
-                marginRight: "3em",
-              }}
-              color="secondary"
-              size="small"
-            >
-              Go Back
-            </Button>
-          </Link>
-        </div>
-      </AppBar>
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          "& .MuiDrawer-paper": {
-            width: drawerWidth,
-            boxSizing: "border-box",
-          },
-        }}
-        variant="persistent"
-        anchor="left"
-        open={open}
-      >
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "ltr" ? (
-              <ChevronLeftIcon />
-            ) : (
               <ChevronRightIcon />
-            )}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <div className="container">
-          <Typography variant="h4">Design Your Palette</Typography>
-          <div>
-            <Button variant="contained" color="secondary" onClick={clearColors}>
-              Clear Palette
-            </Button>
-            <Button
-              variant="contained"
-              color="success"
-              onClick={addRandomColor}
-              disabled={paletteIsFull}
+            </IconButton>
+            <Typography variant="h6" noWrap component="div">
+              Create a Palette
+            </Typography>
+          </Toolbar>
+          <div style={{ display: "flex", alignItems: "flex-end" }}>
+            <ValidatorForm
+              onSubmit={handleSubmit}
+              style={{ display: "flex", padding: "10px" }}
             >
-              Random Color
-            </Button>
+              <TextValidator
+                size="small"
+                onChange={handlePaletteNameChange}
+                label="Palette Name"
+                value={newPaletteName}
+                validators={["required", "isPaletteNameUnique"]}
+                errorMessages={[
+                  "Enter Palette Name",
+                  "Palette Name already used",
+                ]}
+              ></TextValidator>
+              <Button
+                size="small"
+                color="secondary"
+                type="submit"
+                style={{ padding: "0 20px", margin: "0 5px 0 20px" }}
+              >
+                Save Palette
+              </Button>
+            </ValidatorForm>
+            <Link to="/palette" style={{ textDecoration: "none" }}>
+              <Button
+                variant="contained"
+                style={{
+                  display: "flex",
+                  marginBottom: "15px",
+                  marginRight: "3em",
+                  marginTop: "10px",
+                }}
+                color="secondary"
+                size="small"
+              >
+                Go Back
+              </Button>
+            </Link>
           </div>
-          <ChromePicker
-            color={currentColor}
-            onChangeComplete={handleChangeComplete}
-          ></ChromePicker>
-          <ValidatorForm onSubmit={createColor}>
-            <TextValidator
-              onChange={handleChange}
-              value={newName}
-              validators={["required", "isColorNameUnique", "isColorUnique"]}
-              errorMessages={[
-                "Enter a color name",
-                "Color name must be unique",
-                "Color already used",
-              ]}
-            />
-            <Button
-              variant="contained"
-              color="primary"
-              style={{ backgroundColor: paletteIsFull ? "grey" : currentColor }}
-              type="submit"
-              disabled={paletteIsFull}
-            >
-              {paletteIsFull ? "Palette Full" : "Add color"}
-            </Button>
-          </ValidatorForm>
+        </AppBar>
+        <Drawer
+          sx={{
+            width: drawerWidth,
+            flexShrink: 0,
+            "& .MuiDrawer-paper": {
+              width: drawerWidth,
+              boxSizing: "border-box",
+            },
+          }}
+          variant="persistent"
+          anchor="left"
+          open={open}
+        >
+          <DrawerHeader>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === "ltr" ? (
+                <ChevronLeftIcon />
+              ) : (
+                <ChevronRightIcon />
+              )}
+            </IconButton>
+          </DrawerHeader>
           <Divider />
-        </div>
-      </Drawer>
-      <Main open={open}>
-        <DrawerHeader />
+          <div className="container">
+            <Typography variant="h4">Design Your Palette</Typography>
+            <div>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={clearColors}
+              >
+                Clear Palette
+              </Button>
+              <Button
+                variant="contained"
+                color="success"
+                onClick={addRandomColor}
+                disabled={paletteIsFull}
+              >
+                Random Color
+              </Button>
+            </div>
+            <ChromePicker
+              color={currentColor}
+              onChangeComplete={handleChangeComplete}
+            ></ChromePicker>
+            <ValidatorForm onSubmit={createColor} instantValidate={false}>
+              <TextValidator
+                onChange={handleChange}
+                value={newName}
+                validators={["required", "isColorNameUnique", "isColorUnique"]}
+                errorMessages={[
+                  "Enter a color name",
+                  "Color name must be unique",
+                  "Color already used",
+                ]}
+              />
+              <Button
+                variant="contained"
+                color="primary"
+                style={{
+                  backgroundColor: paletteIsFull ? "grey" : currentColor,
+                }}
+                type="submit"
+                disabled={paletteIsFull}
+              >
+                {paletteIsFull ? "Palette Full" : "Add color"}
+              </Button>
+            </ValidatorForm>
+            <Divider />
+          </div>
+        </Drawer>
 
-        {colorsArr.map((color) => {
-          return (
-            <DraggableColorBox
-              key={color.name}
-              color={color.color}
-              name={color.name}
-              handleClick={() => removeColor(color.name)}
-            ></DraggableColorBox>
-          );
-        })}
-      </Main>
-    </Box>
+        <Main open={open}>
+          <DrawerHeader />
+
+          {colorsArr.map((color) => {
+            return (
+              <NewPalatteColorBox
+                key={color.name}
+                color={color.color}
+                name={color.name}
+                handleClick={() => removeColor(color.name)}
+              ></NewPalatteColorBox>
+            );
+          })}
+        </Main>
+      </Box>
+    </motion.div>
   );
 }
 

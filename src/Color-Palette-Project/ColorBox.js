@@ -3,6 +3,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Link } from "react-router-dom";
 import chroma from "chroma-js";
 import "./ColorBox.css";
+import { motion } from "framer-motion";
 
 class ColorBox extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class ColorBox extends Component {
         text={this.props.background}
         onCopy={this.changeCopyState}
       >
-        <div style={{ background }} className="ColorBox">
+        <motion.div style={{ background }} className="ColorBox">
           <div
             style={{ background }}
             className={`copy-overlay ${copied ? "show" : undefined}`}
@@ -62,7 +63,7 @@ class ColorBox extends Component {
               </span>
             </Link>
           )}
-        </div>
+        </motion.div>
       </CopyToClipboard>
     );
   }

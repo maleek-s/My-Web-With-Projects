@@ -1,0 +1,22 @@
+h3,h4{
+    color: white
+}
+
+.Play-container {
+    height: 100vh;
+    padding-top: 5em;
+}
+
+.Play-text{
+    width: 80%;
+    height: 25%;
+    padding: 1em;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    border: 3px solid white;
+}
+
+h3 span {
+    font-size: 0.8em;
+}

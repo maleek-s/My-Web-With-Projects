@@ -3,6 +3,7 @@ import ColorBox from "./ColorBox";
 import Navbar from "./PaletteNavbar";
 import PaletteFooter from "./PaletteFooter";
 import "./Palette.css";
+import { motion } from "framer-motion";
 
 class Palette extends Component {
   constructor(props) {
@@ -33,7 +34,12 @@ class Palette extends Component {
       );
     });
     return (
-      <div className="Palette">
+      <motion.div
+        className="Palette"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0, transition: { duration: 0.3 } }}
+      >
         <Navbar
           level={level}
           changeLevel={this.changeLevel}
@@ -42,7 +48,7 @@ class Palette extends Component {
         />
         <div className="Palette-colors">{colorBoxes}</div>
         <PaletteFooter paletteName={paletteName} emoji={emoji}></PaletteFooter>
-      </div>
+      </motion.div>
     );
   }
 }

@@ -1,52 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Grid from "@mui/material/Unstable_Grid2";
-import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
+import { ValidatorForm } from "react-material-ui-form-validator";
+import TextField from "@mui/material/TextField";
 import Button from "react-bootstrap/Button";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import "./PlayerCard.css";
 
-const renderTime = ({ remainingTime }) => {
-  if (remainingTime === 0) {
-    return <div className="timer">Too lale...</div>;
-  }
-
-  return (
-    <div className="timer">
-      <div className="text">Remaining</div>
-      <div className="value">{remainingTime}</div>
-      <div className="text">seconds</div>
-    </div>
-  );
-};
-
 function PlayerCard(props) {
   const [key, setKey] = useState(0);
-  useEffect(() => {
-    ValidatorForm.addValidationRule("guessInput", (value) => {
-      return value.length > 1;
-    });
-  });
 
-  return (
-    <div className="PlayerCard">
-      <Grid container spacing={1}>
-        <Grid xs={12}>
-          <div className="Counter">
-            <div className="timer-wrapper">
-              <CountdownCircleTimer
-                key={key}
-                isPlaying
-                duration={10}
-                colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
-                colorsTime={[7, 5, 2, 0]}
-                onComplete={() => [true, 1000]}
-              >
-                {renderTime}
-              </CountdownCircleTimer>
-            </div>
-          </div>
-        </Grid>
-        <Grid xs={12}></Grid>
+  const renderTime = ({ remainingTime }) => {
+    if (remainingTime === 0) {
+      return <div className="timer">Too late...</div>;
+    }
+
+    return (
+      <div className="timer">
         <Grid xs={12}>
           <div className="randWord">
             <p>{props.randWord}</p>
@@ -55,7 +24,7 @@ function PlayerCard(props) {
         <Grid xs={12}>
           <div className="guessForm">
             <ValidatorForm onSubmit={props.newArr}>
-              <TextValidator
+              <TextField
                 fullWidth
                 color="secondary"
                 onChange={(e) => props.guessInput(e.target.value)}
@@ -63,16 +32,10 @@ function PlayerCard(props) {
                 value={props.value}
                 variant="standard"
                 id="standard-password-input fullWidth"
-                validators={["required", "guessInput"]}
-                errorMessages={["Take a Shot", "Type in something real..."]}
-                disabled={!props.disButton}
-              ></TextValidator>
+                disabled={false}
+              ></TextField>
               <Grid>
-                <Button
-                  disabled={!props.disButton}
-                  variant="secondary"
-                  type="submit"
-                >
+                <Button disabled={false} variant="secondary" type="submit">
                   Feeling Lucky Punk?
                 </Button>
               </Grid>
@@ -84,13 +47,37 @@ function PlayerCard(props) {
             <span>Correct Answers:</span>
             <p>{props.score}</p>
           </div>
-          <div className="button-wrapper">
-            <Button onClick={() => setKey((prevKey) => prevKey + 1)}>
-              Restart Timer
-            </Button>
+        </Grid>
+      </div>
+    );
+  };
+
+  return (
+    <div className="PlayerCard">
+      <Grid container spacing={1}>
+        <Grid xs={12}>
+          <div className="Counter">
+            <div className="timer-wrapper">
+              <CountdownCircleTimer
+                key={key}
+                isPlaying
+                duration={600}
+                colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
+                colorsTime={[7, 5, 2, 0]}
+                onComplete={() => [true, 1000]}
+                size={500}
+              >
+                {renderTime}
+              </CountdownCircleTimer>
+            </div>
           </div>
         </Grid>
       </Grid>
+      <div className="button-wrapper">
+        <Button onClick={() => setKey((prevKey) => prevKey + 1)}>
+          Restart Timer
+        </Button>
+      </div>
     </div>
   );
 }

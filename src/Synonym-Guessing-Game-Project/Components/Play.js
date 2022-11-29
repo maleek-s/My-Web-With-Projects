@@ -3,6 +3,8 @@ import PlayerCard from "./PlayerCard";
 import "./Synonym-Home.css";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Play.css";
+import { motion } from "framer-motion";
 
 // const nouns = [
 //   "time",
@@ -185,20 +187,25 @@ const Play = (props) => {
   };
 
   return (
-    <div className="App">
+    <motion.div
+      className="App"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+    >
       {started === false ? (
-        <div>
-          <h3>synonym</h3>
-          <h4>noun</h4>
-          <p> synonym si-nə-ˌnim</p>
-          <p>
-            {" "}
-            : one of two or more words or expressions of the same language that
-            have the same or nearly the same meaning in some or all senses
-          </p>
-          <Button onClick={startGame} disabled={disButton}>
-            Fetch me a Word
-          </Button>
+        <div className="Play-container">
+          <div className="Play-text">
+            <h3>
+              synonym, <span>a noun</span>
+            </h3>
+            <p> synonym si-nə-ˌnim</p>
+            <p>
+              one of two or more words or expressions of the same language that
+              have the same or nearly the same meaning in some or all senses
+            </p>
+            <Button onClick={startGame}>Fetch me a Word</Button>
+          </div>
         </div>
       ) : (
         <PlayerCard
@@ -213,7 +220,7 @@ const Play = (props) => {
           disButton={disButton}
         ></PlayerCard>
       )}
-    </div>
+    </motion.div>
   );
 
   // this is going to be stateful parent component

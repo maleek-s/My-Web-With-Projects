@@ -1,13 +1,17 @@
 import { makeStyles } from "tss-react/mui";
+import bg from "./background-main.svg";
 
 const useStyles = makeStyles()((theme) => {
   return {
     root: {
-      backgroundColor: "blue",
+      backgroundColor: "#020220",
       height: "100vh",
       display: "flex",
       alignItems: "flex-start",
       justifyContent: "center",
+      backgroundImage: `url(${bg})`,
+      /* background by SVGBackgrounds.com */
+      overflow: "scroll",
     },
     container: {
       width: "50%",
@@ -15,6 +19,9 @@ const useStyles = makeStyles()((theme) => {
       alignItems: "flex-start",
       flexDirection: "column",
       flexWrap: "wrap",
+      "@media (max-width: 1600px)": {
+        width: "60%",
+      },
     },
     nav: {
       display: "flex",
@@ -25,6 +32,11 @@ const useStyles = makeStyles()((theme) => {
       "& a": {
         color: "white",
         textDecoration: "none",
+        border: "0px white solid",
+        transition: "all 5s ease-in-out",
+        "&:hover": {
+          border: "1px white solid",
+        },
       },
     },
     palettes: {
@@ -32,7 +44,18 @@ const useStyles = makeStyles()((theme) => {
       width: "100%",
       display: "grid",
       gridTemplateColumns: "repeat(3, 30%)",
-      gridGap: "5%",
+      gridGap: "1.5rem",
+      "@media (max-width: 1100.98px)": {
+        gridTemplateColumns: "repeat(2, 50%)",
+      },
+      "@media (max-width: 575.98px)": {
+        gridTemplateColumns: "repeat(1, 100%)",
+      },
+    },
+    heading: {
+      fontSize: "2rem",
+      marginTop: "1.5rem",
+      paddingTop: "1rem",
     },
   };
 });

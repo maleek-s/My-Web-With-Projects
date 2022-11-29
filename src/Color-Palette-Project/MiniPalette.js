@@ -1,6 +1,7 @@
 import React from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { makeStyles } from "tss-react/mui";
+import { motion } from "framer-motion";
 
 function MiniPalette(props) {
   const { paletteName, emoji, colors } = props;
@@ -8,10 +9,10 @@ function MiniPalette(props) {
   const useStyles = makeStyles()((theme) => {
     return {
       root: {
-        backgroundColor: "white",
-        border: "1px solid black",
+        backgroundColor: "#020220",
+        border: "1px solid white",
         borderRadius: "5px",
-        padding: "0.5rem",
+        padding: "0.4rem",
         position: "relative",
         cursor: "pointer",
         "&:hover svg": {
@@ -23,6 +24,7 @@ function MiniPalette(props) {
         height: "150px",
         width: "100%",
         borderRadius: "5px",
+        border: "0.5px solid black",
         overflow: "hidden",
       },
       title: {
@@ -30,22 +32,22 @@ function MiniPalette(props) {
         justifyContent: "space-between",
         alignItems: "center",
         margin: "0",
-        color: "black",
-        paddingTop: "0.5rem",
+        color: "white",
+        paddingTop: "0.3rem",
         fontSize: "1rem",
         position: "relative",
       },
       emoji: {
         marginLeft: "0.5rem",
-        fontSize: "1.5rem",
+        fontSize: "1.2rem",
       },
       miniColor: {
         height: "25%",
         width: "20%",
         display: "inline-block",
-        mirgin: "0 auto",
-        pisition: "relative",
-        marginBottom: "-3.5px",
+        margin: "0 auto",
+        position: "relative",
+        marginBottom: "-4px",
       },
       deleteIcon: {
         color: "white",
@@ -77,7 +79,12 @@ function MiniPalette(props) {
   };
 
   return (
-    <div className={classes.root}>
+    <motion.div
+      className={classes.root}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.3 } }}
+    >
       <DeleteIcon
         className={classes.deleteIcon}
         style={{ transition: "all 0.3s ease-in-out" }}
@@ -88,7 +95,7 @@ function MiniPalette(props) {
       <h5 className={classes.title}>
         {paletteName} <span className={classes.emoji}>{emoji}</span>
       </h5>
-    </div>
+    </motion.div>
   );
 }
 

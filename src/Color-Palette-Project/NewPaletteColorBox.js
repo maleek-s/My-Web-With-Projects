@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "tss-react/mui";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 
-function DraggableColorBox(props) {
+function NewPalatteColorBox(props) {
   const useStyles = makeStyles()((theme) => {
     return {
       root: {
@@ -67,4 +67,4 @@ function DraggableColorBox(props) {
   );
 }
 
-export default DraggableColorBox;
+export default NewPalatteColorBox;

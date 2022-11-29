@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ColorBox from "./ColorBox";
 import Navbar from "./PaletteNavbar";
 import PaletteFooter from "./PaletteFooter";
+import { motion } from "framer-motion";
 
 class SingleColorPalette extends Component {
   constructor(props) {
@@ -40,7 +41,12 @@ class SingleColorPalette extends Component {
       ></ColorBox>
     ));
     return (
-      <div className="SingleColorPalette Palette">
+      <motion.div
+        className="SingleColorPalette Palette"
+        initial={{ width: 0 }}
+        animate={{ width: "100%" }}
+        exit={{ opacity: "100%" }}
+      >
         <Navbar
           handleChange={this.changeFormat}
           showingAllColors={false}
@@ -54,7 +60,7 @@ class SingleColorPalette extends Component {
           </div>
         </div>
         <PaletteFooter paletteName={paletteName} emoji={emoji}></PaletteFooter>
-      </div>
+      </motion.div>
     );
   }
 }
