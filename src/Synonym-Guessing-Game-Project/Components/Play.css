@@ -3,20 +3,63 @@ h3,h4{
 }
 
 .Play-container {
-    height: 100vh;
+    height: 1200vh;
+    text-align: center;
     padding-top: 5em;
+    flex-wrap: wrap;
+    background-image: url("../../Color-Palette-Project/styles/background-main.svg");
+/* background by SVGBackgrounds.com */
+    overflow: hidden;
 }
 
 .Play-text{
     width: 80%;
-    height: 25%;
+    height: 40%;
     padding: 1em;
     margin: auto;
-    display: block;
     justify-content: center;
     border: 3px solid white;
+    display:flow-root;
+    overflow: hidden;
+}
+
+.Play-btn{
+    margin-top: 1em;
 }
 
 h3 span {
     font-size: 0.8em;
-}
+} 
+
+@media (min-width: 991.98px){
+    .Play-container {
+        height: 100vh;
+        padding-top: 2em;
+    }
+        
+    .Play-text{
+        height: 45%;
+    }
+    }
+
+@media (max-width: 575.98px){
+    .Play-container {
+        height: 90%;
+        padding-top: 2em;
+    }
+    
+    .Play-text{
+        height: 50%;
+    }
+    }
+
+    @media (max-width: 366.98px){
+        .Play-container {
+            height: 100%;
+            padding-top: 2em;
+        }
+        
+        .Play-text{
+            height: 60%;
+        }
+        }

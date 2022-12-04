@@ -204,21 +204,31 @@ const Play = (props) => {
               one of two or more words or expressions of the same language that
               have the same or nearly the same meaning in some or all senses
             </p>
-            <Button onClick={startGame}>Fetch me a Word</Button>
+            <div className="Play-btn">
+              <Button variant="outline-success text-white" onClick={startGame}>
+                Fetch Me a Word
+              </Button>
+            </div>
           </div>
         </div>
       ) : (
-        <PlayerCard
-          nouns={nouns2}
-          randWord={randWord}
-          newArr={newArr}
-          guessInput={guessInput}
-          score={score}
-          value={inputValue}
-          startGame={startGame}
-          counter={counter}
-          disButton={disButton}
-        ></PlayerCard>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 0.5 } }}
+          exit={{ opacity: 0, transition: { duration: 0.3 } }}
+        >
+          <PlayerCard
+            nouns={nouns2}
+            randWord={randWord}
+            newArr={newArr}
+            guessInput={guessInput}
+            score={score}
+            value={inputValue}
+            startGame={startGame}
+            counter={counter}
+            disButton={disButton}
+          ></PlayerCard>
+        </motion.div>
       )}
     </motion.div>
   );

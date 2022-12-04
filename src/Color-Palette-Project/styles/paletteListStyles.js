@@ -29,14 +29,17 @@ const useStyles = makeStyles()((theme) => {
       justifyContent: "space-between",
       color: "white",
       alignItems: "center",
+    },
+    topLinks: {
+      marginRight: "2em",
       "& a": {
+        marginRight: "1em",
         color: "white",
         textDecoration: "none",
-        border: "0px white solid",
         transition: "all 5s ease-in-out",
-        "&:hover": {
-          border: "1px white solid",
-        },
+      },
+      "&:hover": {
+        color: "blue",
       },
     },
     palettes: {

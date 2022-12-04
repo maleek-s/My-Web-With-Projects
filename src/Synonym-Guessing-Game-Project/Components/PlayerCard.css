@@ -1,5 +1,6 @@
 .PlayerCard{
-    height: 50vh;
+    height: 100vh;
+    background-color: #080424;
     display: block;
     justify-content: center;
     padding-top: 5rem;
@@ -57,7 +58,12 @@ h1 {
   }
   
   .button-wrapper {
-    display: block;
+    display: flex;
+    justify-content: center;
     margin-top: 40px;
+  }
+
+  .guessForm{
+    color: white
   }
   

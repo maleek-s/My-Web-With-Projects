@@ -4,12 +4,12 @@ import HomePage from "./Personal-Web-Project/HomePage";
 import Add from "./Synonym-Guessing-Game-Project/Components/GameAddSyn";
 import Play from "./Synonym-Guessing-Game-Project/Components/Play";
 import SynonymHome from "./Synonym-Guessing-Game-Project/Components/GameHome";
-import seedColors from "./Color-Palette-Project/seedColors.js";
-import Palette from "./Color-Palette-Project/Palette.js";
-import PaletteList from "./Color-Palette-Project/PaletteList.js";
-import NewPaletteForm from "./Color-Palette-Project/NewPaletteForm.js";
-import SingleColorPalette from "./Color-Palette-Project/SingleColorPalette.js";
-import { generatePalette } from "./Color-Palette-Project/colorHelpers.js";
+import seedColors from "./Color-Palette-Project/Assets/seedColors.js";
+import Palette from "./Color-Palette-Project/Components/Palette.js";
+import PaletteList from "./Color-Palette-Project/Components/PaletteList.js";
+import NewPaletteForm from "./Color-Palette-Project/Components/NewPaletteForm.js";
+import SingleColorPalette from "./Color-Palette-Project/Components/SingleColorPalette.js";
+import { generatePalette } from "./Color-Palette-Project/Assets/colorHelpers.js";
 import { AnimatePresence } from "framer-motion";
 
 function AppRouter(props) {
