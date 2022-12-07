@@ -1,0 +1,59 @@
+.homePageMain {
+    height: 200vh;
+}
+
+.homePageMain-h2{
+    display: grid;
+    justify-content: center;
+    margin-left: 3em;
+    margin-top: 7em;
+}
+
+.homePageMain-h2 h2{
+    font-size: 6em;
+    font-weight: bold;
+}
+
+.homePageMain-btns{
+    margin-top: 3em;
+}
+
+.homePageMain-logos{
+margin-top: 2em;
+}
+
+.homePageMain-s3-line{
+    border-radius: 5%;
+    height: 1px;
+    background-color: #376DDF;
+}
+
+.homePageMain-s3{
+    display: grid;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.homePageMain-s3 p{
+    color: black;
+}
+
+.homePageMain-s3 span{
+    color: #376DDF;
+}
+
+#h4{
+    color: #202020;
+    font-weight: 400;
+}
+
+.homePageMain-s3-text{
+    padding-bottom: 150px;
+}
+
+.homePageMain-s3-text-right p{
+    color: black;
+    font-size: 20px;
+}
