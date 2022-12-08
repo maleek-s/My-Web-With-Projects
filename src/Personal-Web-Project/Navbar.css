@@ -1,3 +1,11 @@
+#AppBarStyleBlack{
+    background-color: black;
+}
+
+#AppBarStyleWhite{
+    background-color: white;
+}
+
 .Navbar {
     align-content: flex-start;
     height: max-content;

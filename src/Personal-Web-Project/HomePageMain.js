@@ -7,12 +7,22 @@ import mainEllipses from "./assets/MainEllipses.svg";
 import mainHTML from "./assets/HTML.svg";
 import "./HomePageMain.css";
 
-function HomePageMain() {
+function HomePageMain(props) {
+  const { isDarkMode } = props;
+
   return (
     <div>
-      <Grid container spacing={2} className="homePageMain">
+      <Grid
+        container
+        spacing={2}
+        className={isDarkMode ? "homePageMainWhite" : "homePageMainBlack"}
+      >
         <Grid item xs={8}>
-          <div className="homePageMain-h2">
+          <div
+            className={
+              isDarkMode ? "homePageMain-h2-white" : "homePageMain-h2-black"
+            }
+          >
             <h2>I develop,</h2>
             <h2>and I do it well</h2>
             <div className="homePageMain-btns">
@@ -49,6 +59,7 @@ function HomePageMain() {
           display="flex"
           justifyContent="flex-end"
           mr={6}
+          pt={8}
           height="1px"
         >
           <h4 id="h4">Skills</h4>
@@ -57,7 +68,7 @@ function HomePageMain() {
           </Grid>
         </Grid>
         <Grid container spacing={2} className="homePageMain-s3-text">
-          <Grid item xs={8}>
+          <Grid item xs={9} mt={6}>
             <div className="homePageMain-s3">
               <p>Over the last year and a</p>
               <p>half I have been</p>
@@ -67,23 +78,64 @@ function HomePageMain() {
               <p>a full stack developer</p>
             </div>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={3} pr={5} mt={6}>
             <div className="homePageMain-s3-text-right">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-                consequatur soluta, reiciendis tempora eum animi optio odit. Rem
-                eaque, voluptatibus aliquid error, veniam eos omnis, itaque
-                recusandae in ipsa eligendi. Ducimus dolorem magnam natus quae
-                recusandae tenetur soluta unde facere odit quisquam cupiditate a
-                error, sapiente facilis incidunt ex deserunt culpa id
-                consequuntur temporibus impedit commodi dignissimos, laudantium
-                enim.
+                On my web development journey, I've gained experience working
+                with the following technologies:
               </p>
             </div>
             <div>
-              <img src={mainHTML} alt="HTML Logo" />
-              <img src={mainHTML} alt="HTML Logo" />
-              <img src={mainHTML} alt="HTML Logo" />
+              <div>
+                <img src={mainHTML} alt="HTML Logo" />
+                HTML 5
+                <img
+                  src={mainHTML}
+                  alt="HTML Logo"
+                  className="homePageMain-s3-icons-right"
+                />
+                JavaScript
+              </div>
+              <div>
+                <img src={mainHTML} alt="HTML Logo" />
+                CSS3
+                <img
+                  src={mainHTML}
+                  alt="HTML Logo"
+                  className="homePageMain-s3-icons-right"
+                />
+                React
+              </div>
+              <div>
+                <img src={mainHTML} alt="HTML Logo" />
+                NodeJS
+                <img
+                  src={mainHTML}
+                  alt="HTML Logo"
+                  className="homePageMain-s3-icons-right"
+                />
+                Express
+              </div>
+              <div>
+                <img src={mainHTML} alt="HTML Logo" />
+                MySQL
+                <img
+                  src={mainHTML}
+                  alt="HTML Logo"
+                  className="homePageMain-s3-icons-right"
+                />
+                Mongo DB
+              </div>
+              <div>
+                <img src={mainHTML} alt="HTML Logo" />
+                Material UI
+                <img
+                  src={mainHTML}
+                  alt="HTML Logo"
+                  className="homePageMain-s3-icons-right"
+                />
+                Bootstrap
+              </div>
             </div>
           </Grid>
         </Grid>

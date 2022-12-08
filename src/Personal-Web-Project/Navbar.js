@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
@@ -13,17 +14,23 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import MaleekLogo from "./assets/Maleek-Logo.svg";
+import MaleekLogoDark from "./assets/Maleek-Logo-Dark.svg";
+import SimonSays from "./assets/SimonSays.svg";
+import SimonSaysWhite from "./assets/SimonSaysWhiteMode.png";
+import "./Navbar.css";
 
 const drawerWidth = 240;
 const navItems = ["Home", "Skills", "Portofolio", "Contact"];
 
 function Navbar(props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  const { handleDarkMode, isDarkMode } = props;
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -48,7 +55,10 @@ function Navbar(props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar component="nav" style={{ background: "#ffffff" }}>
+      <AppBar
+        component="nav"
+        id={isDarkMode ? "AppBarStyleBlack" : "AppBarStyleWhite"}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -63,11 +73,33 @@ function Navbar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <img src={MaleekLogo} alt="My Personal Logo With Name" />
+            <img
+              src={isDarkMode ? MaleekLogoDark : MaleekLogo}
+              alt="My Personal Logo With Name"
+            />
           </Box>
+
+          <Box
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+          >
+            <button
+              style={{ backgroundColor: "transparent", border: "none" }}
+              onClick={handleDarkMode}
+            >
+              <img
+                src={isDarkMode ? SimonSaysWhite : SimonSays}
+                alt="Dark Mode Button"
+              />
+            </button>
+          </Box>
+
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#202020" }}>
+              <Button
+                key={item}
+                sx={isDarkMode ? { color: "white" } : { color: "#202020" }}
+              >
                 {item}
               </Button>
             ))}
