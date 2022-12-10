@@ -17,14 +17,19 @@ import MaleekLogo from "./assets/Maleek-Logo.svg";
 import MaleekLogoDark from "./assets/Maleek-Logo-Dark.svg";
 import SimonSays from "./assets/SimonSays.svg";
 import SimonSaysWhite from "./assets/SimonSaysWhiteMode.png";
+import { motion } from "framer-motion";
 import "./Navbar.css";
 
 const drawerWidth = 240;
-const navItems = ["Home", "Skills", "Portofolio", "Contact"];
+const navItems = ["Skills", "Portofolio", "Contact"];
 
 function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleClick = (e) => {
+    props.handleScroll(e.target.value);
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -73,8 +78,9 @@ function Navbar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <img
+            <motion.img
               src={isDarkMode ? MaleekLogoDark : MaleekLogo}
+              whileHover={{ scale: 1.01 }}
               alt="My Personal Logo With Name"
             />
           </Box>
@@ -87,7 +93,9 @@ function Navbar(props) {
               style={{ backgroundColor: "transparent", border: "none" }}
               onClick={handleDarkMode}
             >
-              <img
+              <motion.img
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
                 src={isDarkMode ? SimonSaysWhite : SimonSays}
                 alt="Dark Mode Button"
               />
@@ -98,7 +106,9 @@ function Navbar(props) {
             {navItems.map((item) => (
               <Button
                 key={item}
+                value={item.toLowerCase()}
                 sx={isDarkMode ? { color: "white" } : { color: "#202020" }}
+                onClick={handleClick}
               >
                 {item}
               </Button>

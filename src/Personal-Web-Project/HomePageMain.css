@@ -1,11 +1,15 @@
 .homePageMainWhite {
-    height: 200vh;
-    background-color: black;
+    height: 400vh;
+    background-color: 1E1E1E;
 }
 
 .homePageMainBlack{
-    height: 200vh;
+    height: 400vh;
     background-color: white;
+}
+
+.homePageMain-mainLogo{
+    overflow: hidden;
 }
 
 .homePageMain-h2-white{
@@ -21,17 +25,17 @@
     justify-content: center;
     margin-left: 3em;
     margin-top: 7em;
-    color: black;
+    color: 1E1E1E;
 }
 
 
 .homePageMain-h2-white h2{
-    font-size: 6em;
+    font-size: 5em;
     font-weight: bold;
 }
 
 .homePageMain-h2-black h2{
-    font-size: 6em;
+    font-size: 5em;
     font-weight: bold;
 }
 
@@ -43,13 +47,13 @@
 margin-top: 2em;
 }
 
-.homePageMain-s3-line{
+ .homePageMain-s3-line{
     border-radius: 5%;
     height: 1px;
     background-color: #376DDF;
 }
 
-.homePageMain-s3{
+.homePageMain-s3Black{
     display: grid;
     justify-content: center;
     margin-left: 10px;
@@ -58,16 +62,46 @@ margin-top: 2em;
     line-height: 1.1em;
 }
 
-.homePageMain-s3 p{
+.homePageMain-s3Black p{
     color: black;
 }
 
-.homePageMain-s3 span{
+.homePageMain-s3White{
+    display: grid;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 1.1em;
+}
+
+.homePageMain-s3-logos-rightWhite{
+    color: white;
+}
+
+.homePageMain-s3-logos-rightBlack{
+    color: black;
+}
+
+.homePageMain-s3White p{
+    color: white;
+}
+
+.homePageMain-s3White span{
     color: #376DDF;
 }
 
-#h4{
+.homePageMain-s3Black span{
+    color: #376DDF;
+}
+
+#h4Black{
     color: #202020;
+    font-weight: 400;
+}
+
+#h4White{
+    color: white;
     font-weight: 400;
 }
 
@@ -75,11 +109,38 @@ margin-top: 2em;
     padding-bottom: 150px;
 }
 
-.homePageMain-s3-text-right p{
+.homePageMain-s3-text-rightBlack p{
+    width: 80%;
     color: black;
     font-size: 20px;
 }
 
-.homePageMain-s3-icons-right{
-    margin-left: 4em;
+.homePageMain-s3-text-rightWhite p{
+    width: 80%;
+    color: white;
+    font-size: 20px;
 }
+
+.homePageMain-s3-icons-right{
+    margin-left: 2em;
+}
+
+.homePageMain-s5White{
+    color: black;
+}
+
+.homePageMain-s5White h4{
+    color: white;
+    font-size: 2.5em;
+}
+
+.homePageMain-s5Black h4{
+    color: black;
+    font-size: 2.5em;
+}
+
+@media (min-width: 1000.98px){
+    .homePageMain-mainLogo img{
+        padding-left: 10em;
+        height: 100%;
+    }}

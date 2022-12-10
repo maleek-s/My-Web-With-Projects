@@ -1,0 +1,50 @@
+.homePageMain-s4Black{
+    background-color: black;
+}
+
+.homePageMain-s4White{
+    background-color: white;
+}
+
+.homePageMain-s4-line{
+    border-radius: 5%;
+    height: 1px;
+    background-color: #376DDF;
+}
+
+#s4-h4White{
+    color: black;
+    font-weight: 400;
+}
+
+#s4-h4Black{
+    color: white;
+    font-weight: 400;
+}
+
+.homePageMain-s4-photo img{
+    width: 80%;
+    margin-left: 3em;
+}
+
+.homePageMain-s4-text-rightBlack h3{
+    font-size: 3.5em;
+    color: black;
+}
+
+.homePageMain-s4-text-rightWhite h3{
+    font-size: 3.5em;
+    color: white;
+}
+
+.homePageMain-s4-text-rightBlack p{
+    font-size: 1em;
+    color: black;
+}
+
+.homePageMain-s4-text-rightWhite p{
+    font-size: 1em;
+    color: white;
+}
+
+
