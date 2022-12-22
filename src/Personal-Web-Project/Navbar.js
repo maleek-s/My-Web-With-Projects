@@ -28,6 +28,7 @@ function Navbar(props) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleClick = (e) => {
+    console.log(e);
     props.handleScroll(e.target.value);
   };
 
@@ -78,11 +79,14 @@ function Navbar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <motion.img
-              src={isDarkMode ? MaleekLogoDark : MaleekLogo}
-              whileHover={{ scale: 1.01 }}
-              alt="My Personal Logo With Name"
-            />
+            <Button onClick={handleClick}>
+              <motion.img
+                src={isDarkMode ? MaleekLogoDark : MaleekLogo}
+                whileHover={{ scale: 1.01 }}
+                alt="My Personal Logo With Name"
+                title="home"
+              />
+            </Button>
           </Box>
 
           <Box

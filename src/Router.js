@@ -16,9 +16,7 @@ function AppRouter(props) {
   const location = useLocation();
 
   const savedPalettes = JSON.parse(window.localStorage.getItem("palettes"));
-  const [allPalettes, setAllPalettes] = useState(
-    savedPalettes.length === 0 ? seedColors : savedPalettes
-  );
+  const [allPalettes, setAllPalettes] = useState(savedPalettes || seedColors);
 
   function findPalette(id) {
     return allPalettes.find((palette) => {

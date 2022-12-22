@@ -1,10 +1,10 @@
 .homePageMainWhite {
-    height: 400vh;
-    background-color: 1E1E1E;
+    height: 410vh;
+    background-color: #141A1F;
 }
 
 .homePageMainBlack{
-    height: 400vh;
+    height: 410vh;
     background-color: white;
 }
 
@@ -25,7 +25,7 @@
     justify-content: center;
     margin-left: 3em;
     margin-top: 7em;
-    color: 1E1E1E;
+    color: #1E1E1E;
 }
 
 
@@ -138,6 +138,28 @@ margin-top: 2em;
     color: black;
     font-size: 2.5em;
 }
+
+.homePageMain-HCJ{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6em;
+    height: 2em;
+    background-color: #F0F0F0;
+    border-radius: 10%;
+    margin-left: 0.5em;
+    text-align: center;
+    color: #376DDF;
+}
+
+#fullName, #email, #message{
+    color: white;
+}
+
+#fullNameW, #emailW, #messageW{
+    color: black;
+}
+
 
 @media (min-width: 1000.98px){
     .homePageMain-mainLogo img{
