@@ -6,25 +6,25 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import MaleekLogo from "./assets/Maleek-Logo.svg";
 import MaleekLogoDark from "./assets/Maleek-Logo-Dark.svg";
 import SimonSays from "./assets/SimonSays.svg";
+import DarkLightMini from "./assets/DarkLightMini.svg";
+import DarkLightMini2 from "./assets/DarkLightMini2.svg";
+import MyLogoMini from "./assets/MyLogoMini.svg";
 import SimonSaysWhite from "./assets/SimonSaysWhiteMode.png";
 import { motion } from "framer-motion";
 import "./Navbar.css";
 
-const drawerWidth = 240;
 const navItems = ["Skills", "Portofolio", "Contact"];
 
 function Navbar(props) {
-  const { window } = props;
+  const { handleDarkMode, isDarkMode, window } = props;
+
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleClick = (e) => {
@@ -36,21 +36,38 @@ function Navbar(props) {
     setMobileOpen(!mobileOpen);
   };
 
-  const { handleDarkMode, isDarkMode } = props;
-
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
+      <Box style={{ display: "flex", justifyContent: "space-between" }}>
+        <img
+          src={MyLogoMini}
+          alt="My Personal Logo"
+          style={{ display: "flex", marginTop: "20px", marginLeft: "20px" }}
+        />
+        <IconButton
+          onClick={handleDrawerToggle}
+          sx={{ mr: 3, mt: 2, display: { sm: "none" } }}
+        >
+          <CloseIcon sx={{ color: isDarkMode ? "black" : "white" }} />
+        </IconButton>
+      </Box>
       <Divider />
-      <List>
+      <List style={{ display: "grid", marginTop: "5em" }}>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} color="secondary" />
-            </ListItemButton>
-          </ListItem>
+          <Button
+            key={item}
+            value={item.toLowerCase()}
+            sx={isDarkMode ? { color: "black" } : { color: "white" }}
+            onClick={handleClick}
+            style={{
+              height: "3em",
+              fontSize: "2em",
+              fontFamily: "Plus Jakarta Sans, sans-serif",
+              fontWeight: "bold",
+            }}
+          >
+            {item}
+          </Button>
         ))}
       </List>
     </Box>
@@ -66,24 +83,28 @@ function Navbar(props) {
         id={isDarkMode ? "AppBarStyleBlack" : "AppBarStyleWhite"}
       >
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Box
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
+          <Box component="div" sx={{ flexGrow: 1, display: { xs: "flex" } }}>
             <Button onClick={handleClick}>
               <motion.img
                 src={isDarkMode ? MaleekLogoDark : MaleekLogo}
                 whileHover={{ scale: 1.01 }}
                 alt="My Personal Logo With Name"
+                title="home"
+              />
+            </Button>
+            <Button
+              onClick={handleClick}
+              sx={{
+                flexGrow: 1,
+                display: { xs: "flex", sm: "none" },
+                justifyContent: "flex-end",
+                paddingRight: "1.4em",
+              }}
+            >
+              <img
+                src={isDarkMode ? DarkLightMini : DarkLightMini2}
+                onClick={handleDarkMode}
+                alt="Dark or Light Mode Button"
                 title="home"
               />
             </Button>
@@ -118,6 +139,15 @@ function Navbar(props) {
               </Button>
             ))}
           </Box>
+          <IconButton
+            color={isDarkMode ? "inherit" : "default"}
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Box component="nav">
@@ -133,7 +163,10 @@ function Navbar(props) {
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
+              width: "100%",
+              maxWidth: 400,
+              mx: "auto",
+              backgroundColor: isDarkMode ? "white" : "#202020",
             },
           }}
         >
