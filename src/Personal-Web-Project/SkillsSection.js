@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Grid } from "@mui/material";
 import mainHTML from "./assets/HTML.svg";
 import CSSIcon from "./assets/CSSIcon.svg";
@@ -6,10 +6,12 @@ import GitIcon from "./assets/GitIcon.svg";
 import JavaScriptIcon from "./assets/JavaScriptIcon.svg";
 import MaterialUIIcon from "./assets/MaterialUIIcon.svg";
 import ReactIcon from "./assets/ReactIcon.svg";
+import { motion } from "framer-motion";
 import "./HomePageMain.css";
 
 function SkillsSection(props) {
   const { isDarkMode, skillsRef } = props;
+  const scrollRef = useRef(null);
   return (
     <>
       <Grid
@@ -29,10 +31,14 @@ function SkillsSection(props) {
       </Grid>
       <Grid container spacing={1} className="homePageMain-s3-text">
         <Grid item xs={10} sm={8}>
-          <div
+          <motion.div
             className={
               isDarkMode ? "homePageMain-s3White" : "homePageMain-s3Black"
             }
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            viewport={{ root: scrollRef }}
           >
             <p>Over the last year and a</p>
             <p>half I have been</p>
@@ -40,9 +46,9 @@ function SkillsSection(props) {
               <span>dedicated</span> on becoming
             </p>
             <p>a frontend developer</p>
-          </div>
+          </motion.div>
         </Grid>
-        <Grid item xs={4} pr={5} mt={6}>
+        <Grid item xs={12} sm={4} pr={5} mt={6}>
           <div
             className={
               isDarkMode

@@ -47,4 +47,25 @@
     color: white;
 }
 
+@media (max-width: 600px){
+
+    .homePageMain-s3-text{
+        display: flex;
+        justify-content: center;
+    }
+
+    .homePageMain-s4-photo img {
+        margin: auto;
+    }
+
+    .homePageMain-s4-text-rightWhite p{
+        display: none;
+    }
+
+    .homePageMain-s4-text-rightBlack p{
+        display: none;
+    }
+
+}
+
 

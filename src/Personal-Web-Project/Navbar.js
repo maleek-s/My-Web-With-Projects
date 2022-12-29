@@ -48,7 +48,7 @@ function Navbar(props) {
           onClick={handleDrawerToggle}
           sx={{ mr: 3, mt: 2, display: { sm: "none" } }}
         >
-          <CloseIcon sx={{ color: isDarkMode ? "black" : "white" }} />
+          <CloseIcon sx={{ color: isDarkMode ? "white" : "black" }} />
         </IconButton>
       </Box>
       <Divider />
@@ -57,7 +57,7 @@ function Navbar(props) {
           <Button
             key={item}
             value={item.toLowerCase()}
-            sx={isDarkMode ? { color: "black" } : { color: "white" }}
+            sx={isDarkMode ? { color: "white" } : { color: "#202020" }}
             onClick={handleClick}
             style={{
               height: "3em",
@@ -166,7 +166,7 @@ function Navbar(props) {
               width: "100%",
               maxWidth: 400,
               mx: "auto",
-              backgroundColor: isDarkMode ? "white" : "#202020",
+              backgroundColor: isDarkMode ? "#202020" : "white",
             },
           }}
         >

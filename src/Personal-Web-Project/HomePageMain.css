@@ -271,6 +271,22 @@
         font-size: 12px;
     }
 
+    .homePageMain-s3-text-rightWhite{
+        margin-left: 10%;
+    }
+
+    .homePageMain-s3-text-rightBlack{
+        margin-left: 10%;
+    }
+    
+    .homePageMain-s3-logos-rightWhite{
+        margin-left: 10%;
+    }
+
+    .homePageMain-s3-logos-rightBlack{
+        margin-left: 10%;
+    }
+
 }
 
 @media (min-width: 1000.98px){

@@ -20,7 +20,7 @@ function PortofolioSection(props) {
         height="1px"
         ref={portofolioRef}
       >
-        <Grid item xs={10} mr={2}>
+        <Grid item xs={7} sm={10} mr={2}>
           <div className="homePageMain-s4-line"></div>
         </Grid>
         <h4 id={isDarkMode ? "s4-h4Black" : "s4-h4White"}>Portofolio</h4>
@@ -32,7 +32,7 @@ function PortofolioSection(props) {
         className="homePageMain-s3-text"
         justifyContent="center"
       >
-        <Grid item xs={5} mt={6}>
+        <Grid item xs={9} sm={5} mt={6}>
           <div className="homePageMain-s4-photo">
             <Link to="/palette">
               <motion.img
@@ -46,7 +46,7 @@ function PortofolioSection(props) {
             </Link>
           </div>
         </Grid>
-        <Grid item xs={5} pr={5} mt={6}>
+        <Grid item xs={10} sm={5} pr={5} mt={6}>
           <div
             className={
               isDarkMode
@@ -97,7 +97,7 @@ function PortofolioSection(props) {
         className="homePageMain-s3-text"
         justifyContent="center"
       >
-        <Grid item xs={5}>
+        <Grid item xs={10} sm={5}>
           <div
             className={
               isDarkMode
@@ -142,7 +142,7 @@ function PortofolioSection(props) {
             </div>
           </div>
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={9} sm={5}>
           <div className="homePageMain-s4-photo">
             <Link to="/synonym-game">
               <motion.img
