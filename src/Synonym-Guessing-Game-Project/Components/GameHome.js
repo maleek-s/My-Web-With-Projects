@@ -1,6 +1,5 @@
 import "./Synonym-Home.css";
 import NavBar from "./GameNavBar";
-import Footer from "./GameFooter";
 import Play from "./Play";
 import { motion } from "framer-motion";
 
@@ -13,7 +12,6 @@ function SynonymHome() {
     >
       <NavBar />
       <Play />
-      <Footer />
     </motion.div>
   );
 }

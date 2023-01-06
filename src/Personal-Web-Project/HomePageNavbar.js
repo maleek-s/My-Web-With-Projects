@@ -18,7 +18,7 @@ import DarkLightMini2 from "./assets/DarkLightMini2.svg";
 import MyLogoMini from "./assets/MyLogoMini.svg";
 import SimonSaysWhite from "./assets/SimonSaysWhiteMode.png";
 import { motion } from "framer-motion";
-import "./Navbar.css";
+import "./HomePageNavbar.css";
 
 const navItems = ["Skills", "Portofolio", "Contact"];
 
@@ -28,8 +28,7 @@ function Navbar(props) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleClick = (e) => {
-    console.log(e);
-    props.handleScroll(e.target.value);
+    props.handleScroll(e.target.value || e.target.alt.toLowerCase());
   };
 
   const handleDrawerToggle = () => {
@@ -41,8 +40,9 @@ function Navbar(props) {
       <Box style={{ display: "flex", justifyContent: "space-between" }}>
         <img
           src={MyLogoMini}
-          alt="My Personal Logo"
+          alt="Home"
           style={{ display: "flex", marginTop: "20px", marginLeft: "20px" }}
+          onClick={handleClick}
         />
         <IconButton
           onClick={handleDrawerToggle}
@@ -84,12 +84,12 @@ function Navbar(props) {
       >
         <Toolbar>
           <Box component="div" sx={{ flexGrow: 1, display: { xs: "flex" } }}>
-            <Button onClick={handleClick}>
+            <Button>
               <motion.img
+                onClick={handleClick}
                 src={isDarkMode ? MaleekLogoDark : MaleekLogo}
                 whileHover={{ scale: 1.01 }}
-                alt="My Personal Logo With Name"
-                title="home"
+                alt="Home"
               />
             </Button>
             <Button
@@ -166,7 +166,7 @@ function Navbar(props) {
               width: "100%",
               maxWidth: 400,
               mx: "auto",
-              backgroundColor: isDarkMode ? "#202020" : "white",
+              backgroundColor: isDarkMode ? "#202020" : "#efefef",
             },
           }}
         >

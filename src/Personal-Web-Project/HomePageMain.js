@@ -4,20 +4,20 @@ import mainBgPhoto from "./assets/Maleek-Logo2.svg";
 import mainBgPhotoDark from "./assets/Maleek-Logo2Dark.svg";
 import mainLinkedIn from "./assets/LinkedIn.svg";
 import mainGitHub from "./assets/GitHub.svg";
-import mainEllipses from "./assets/MainEllipses.svg";
-import SkillsSection from "./SkillsSection";
-import PortofolioSection from "./PortofolioSection";
-import GetInTouch from "./GetInTouch";
 import mainLinkedInDark from "./assets/LinkedInDark.svg";
 import mainGitHubDark from "./assets/GitHubDark.svg";
+import mainEllipses from "./assets/MainEllipses.svg";
+import SkillsSection from "./HomePageSkillsSection";
+import PortofolioSection from "./HomePagePortofolioSection";
+import GetInTouch from "./HomePageGetInTouch";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import "./HomePagePortofolio.css";
 import "./HomePageMain.css";
-import { Link } from "react-router-dom";
 
 function HomePageMain(props) {
   const initialValues = {
-    fullName: "",
+    from_name: "",
     email: "",
     message: "",
   };
@@ -32,9 +32,7 @@ function HomePageMain(props) {
     });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(formValues);
+  const handleSubmit = () => {
     setFormValues(initialValues);
   };
 
@@ -72,13 +70,13 @@ function HomePageMain(props) {
         container
         spacing={2}
         className={isDarkMode ? "homePageMainWhite" : "homePageMainBlack"}
+        ref={homeRef}
       >
         <Grid item xs={10} sm={8}>
           <div
             className={
               isDarkMode ? "homePageMain-h2-white" : "homePageMain-h2-black"
             }
-            ref={homeRef}
           >
             <h2>I develop,</h2>
             <h2>and I do it (fairly) well.</h2>

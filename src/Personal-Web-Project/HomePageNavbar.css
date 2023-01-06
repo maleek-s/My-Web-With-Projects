@@ -3,7 +3,7 @@
 }
 
 #AppBarStyleWhite{
-    background-color: white;
+    background-color: #efefef;
 }
 
 .Navbar {
@@ -15,7 +15,7 @@
     margin: 0.7em;
     text-decoration: none;
     color: royalblue;
- 
+  
 }
 
 .navBarBtns{

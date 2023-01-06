@@ -7,7 +7,7 @@ import JavaScriptIcon from "./assets/JavaScriptIcon.svg";
 import MaterialUIIcon from "./assets/MaterialUIIcon.svg";
 import ReactIcon from "./assets/ReactIcon.svg";
 import { motion } from "framer-motion";
-import "./HomePageMain.css";
+import "./HomePageSkills.css";
 
 function SkillsSection(props) {
   const { isDarkMode, skillsRef } = props;
@@ -19,10 +19,9 @@ function SkillsSection(props) {
         spacing={2}
         display="flex"
         justifyContent="flex-end"
-        mr={1}
         pt={8}
-        height="1px"
         ref={skillsRef}
+        style={{ height: "15vh", marginTop: "3em" }}
       >
         <h4 id={isDarkMode ? "h4White" : "h4Black"}>Skills</h4>
         <Grid item xs={9} sm={11} pl={10}>
@@ -49,24 +48,30 @@ function SkillsSection(props) {
           </motion.div>
         </Grid>
         <Grid item xs={12} sm={4} pr={5} mt={6}>
-          <div
+          <motion.div
             className={
               isDarkMode
                 ? "homePageMain-s3-text-rightWhite"
                 : "homePageMain-s3-text-rightBlack"
             }
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 2 }}
           >
             <p>
               On my web development journey, I've gained experience working with
               the following technologies:
             </p>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
             className={
               isDarkMode
                 ? "homePageMain-s3-logos-rightWhite"
                 : "homePageMain-s3-logos-rightBlack"
             }
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 2 }}
           >
             <Grid container spacing={1}>
               <Grid className="skillsIcons" item xs={6}>
@@ -95,7 +100,7 @@ function SkillsSection(props) {
                   Express
                 </div>
               </Grid>
-              <Grid item xs={6}>
+              <Grid className="skillsIcons" item xs={6}>
                 <div>
                   <img src={mainHTML} alt="HTML Logo" />
                   MySQL
@@ -122,7 +127,7 @@ function SkillsSection(props) {
                 </div>
               </Grid>
             </Grid>
-          </div>
+          </motion.div>
         </Grid>
       </Grid>
     </>

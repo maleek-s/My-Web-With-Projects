@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import HomeBackground from "./HomeBackground";
-import Navbar from "./Navbar";
+import Navbar from "./HomePageNavbar";
 import HomePageMain from "./HomePageMain";
 import HomePageFooter from "./HomePageFooter";
 import "./HomePageMain.css";
@@ -19,10 +19,12 @@ function HomePage() {
     setIsDarkMode(!isDarkMode);
   };
 
+  useEffect(() => {}, [isDarkMode]);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 1, transition: { duration: 1 } }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
       style={{ display: "grid" }}
       className="mobileMain"
@@ -33,7 +35,7 @@ function HomePage() {
         style={
           isDarkMode
             ? { backgroundColor: "#141A1F" }
-            : { backgroundColor: "white" }
+            : { backgroundColor: "#efefef" }
         }
       >
         <Grid item xs={12}>
@@ -43,7 +45,7 @@ function HomePage() {
             handleScroll={handleScroll}
           ></Navbar>
         </Grid>
-        <Grid item xs={12} mt={12}>
+        <Grid item xs={12} mt={10}>
           <HomePageMain id={id} isDarkMode={isDarkMode}></HomePageMain>
         </Grid>
         <Grid item xs={12}>

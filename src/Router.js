@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes, useParams, useLocation } from "react-router-dom";
 import HomePage from "./Personal-Web-Project/HomePage";
-import Add from "./Synonym-Guessing-Game-Project/Components/GameAddSyn";
 import Play from "./Synonym-Guessing-Game-Project/Components/Play";
 import SynonymHome from "./Synonym-Guessing-Game-Project/Components/GameHome";
 import seedColors from "./Color-Palette-Project/Assets/seedColors.js";
@@ -11,6 +10,7 @@ import NewPaletteForm from "./Color-Palette-Project/Components/NewPaletteForm.js
 import SingleColorPalette from "./Color-Palette-Project/Components/SingleColorPalette.js";
 import { generatePalette } from "./Color-Palette-Project/Assets/colorHelpers.js";
 import { AnimatePresence } from "framer-motion";
+import KokaIpo from "./Personal-Web-Project/KokaIpo";
 
 function AppRouter(props) {
   const location = useLocation();
@@ -63,6 +63,8 @@ function AppRouter(props) {
 
           <Route path="/" element={<HomePage />}></Route>
 
+          <Route path="/kokaipo" element={<KokaIpo />}></Route>
+
           <Route
             path="/palette"
             element={
@@ -90,7 +92,6 @@ function AppRouter(props) {
             }
           ></Route>
           <Route path="/synonym-game" element={<SynonymHome />}></Route>
-          <Route path="/synonym-game/add" element={<Add />}></Route>
           <Route path="/synonym-game/play" element={<Play />}></Route>
         </Routes>
       </AnimatePresence>

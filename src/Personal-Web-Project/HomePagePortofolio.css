@@ -1,9 +1,10 @@
+
 .homePageMain-s4Black{
     background-color: #1E1E1E;
 }
 
 .homePageMain-s4White{
-    background-color: white;
+    background-color: #efefef;
 }
 
 .homePageMain-s4-line{
@@ -49,13 +50,25 @@
 
 @media (max-width: 600px){
 
+
     .homePageMain-s3-text{
-        display: flex;
         justify-content: center;
+        padding-bottom: 10%;
     }
 
     .homePageMain-s4-photo img {
+        width: 100%;
         margin: auto;
+    }
+
+    .homePageMain-s4-text-rightWhite h3{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .homePageMain-s4-text-rightBlack h3{
+        text-align: center;
+        font-size: 35px;
     }
 
     .homePageMain-s4-text-rightWhite p{

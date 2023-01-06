@@ -42,9 +42,9 @@ h3 span {
     }
     }
 
-@media (max-width: 575.98px){
+@media (max-width: 600px){
     .Play-container {
-        height: 90%;
+        height: 100vh;
         padding-top: 2em;
     }
     

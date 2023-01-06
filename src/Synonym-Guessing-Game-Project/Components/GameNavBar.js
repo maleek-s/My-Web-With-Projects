@@ -7,7 +7,12 @@ import Navbar from "react-bootstrap/Navbar";
 function NavBar() {
   return (
     <div>
-      <Navbar bg="dark" variant="dark" className="justify-content-center">
+      <Navbar
+        bg="dark"
+        variant="dark"
+        className="justify-content-center"
+        sticky="top"
+      >
         <Nav>
           <Link to="/" style={{ textDecoration: "none" }}>
             Back to Home Page

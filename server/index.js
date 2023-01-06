@@ -40,7 +40,7 @@ app.get("/books", (req, res) => {
 
 const fetchOneWordData = async () => {
   try {
-    const res = await axios.get("https://tuna.thesaurus.com/pageData/woman");
+    const res = await axios.get("https://tuna.thesaurus.com/pageData/dizzy");
     const data = res.data.data.definitionData;
 
     const q =

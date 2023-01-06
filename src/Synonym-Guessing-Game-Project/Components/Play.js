@@ -88,24 +88,67 @@ const Play = (props) => {
   const [inputValue, setInputValue] = useState("");
   const [nouns2, setNouns2] = useState([
     {
-      word: "test",
-      synonym1: { synonymWord: "test1", similarity: "90%" },
-      synonym2: { synonym: "test2", similarity: "70%" },
+      mainWord: "hot",
+      synonymWord: "blazing",
+      synonymWord2: "boiling",
+      synonymWord3: "heated",
+      synonymWord4: "humid",
     },
     {
-      word: "day",
-      synonym1: { synonymWord: "day1", similarity: "100%" },
-      synonym2: { synonym: "day2", similarity: "80%" },
+      mainWord: "cold",
+      synonymWord: "bitter",
+      synonymWord2: "bleak",
+      synonymWord3: "brisk",
+      synonymWord4: "chilled",
     },
     {
-      word: "night",
-      synonym1: { synonymWord: "night1", similarity: "100%" },
-      synonym2: { synonym: "night2", similarity: "80%" },
+      mainWord: "man",
+      synonymWord: "brother",
+      synonymWord2: "chap",
+      synonymWord3: "father",
+      synonymWord4: "fellow",
     },
     {
-      word: "mama",
-      synonym1: { synonymWord: "mama1", similarity: "100%" },
-      synonym2: { synonym: "mama2", similarity: "80%" },
+      mainWord: "woman",
+      synonymWord: "daughter",
+      synonymWord2: "girl",
+      synonymWord3: "mother",
+      synonymWord4: "wife",
+    },
+    {
+      mainWord: "adorable",
+      synonymWord: "captivating",
+      synonymWord2: "charming",
+      synonymWord3: "cute",
+      synonymWord4: "delightful",
+    },
+    {
+      mainWord: "adventurous",
+      synonymWord: "adventuresome",
+      synonymWord2: "audacious",
+      synonymWord3: "bold",
+      synonymWord4: "courageous",
+    },
+    {
+      mainWord: "brave",
+      synonymWord: "adventurous",
+      synonymWord2: "audacious",
+      synonymWord3: "confident",
+      synonymWord4: "courageous",
+    },
+    {
+      mainWord: "confused",
+      synonymWord: "baffled",
+      synonymWord2: "befuddled",
+      synonymWord3: "bewildered",
+      synonymWord4: "dazed",
+    },
+    {
+      mainWord: "cooperative",
+      synonymWord: "collegial",
+      synonymWord2: "concerted",
+      synonymWord3: "coordinated",
+      synonymWord4: "harmonious",
     },
   ]);
 
@@ -123,16 +166,15 @@ const Play = (props) => {
   }, [counter]);
 
   const startGame = () => {
-    const startRandWord = nouns2[randNum].word;
-    setRandWord(startRandWord);
+    const startRandWord = nouns2[randNum];
+    setRandWord(startRandWord.mainWord);
     setCounter(10);
     setDisButton(true);
     setStarted(true);
   };
 
   const updateNouns2 = () => {
-    const result = nouns2.filter((word) => word.word !== randWord);
-    console.log(result);
+    const result = nouns2.filter((word) => word.mainWord !== randWord.mainWord);
     if (result.length > 0) {
       return setNouns2([...result]);
     } else {
@@ -141,21 +183,6 @@ const Play = (props) => {
           word: "test",
           synonym1: { synonymWord: "test1", similarity: "90%" },
           synonym2: { synonym: "test2", similarity: "70%" },
-        },
-        {
-          word: "day",
-          synonym1: { synonymWord: "day1", similarity: "100%" },
-          synonym2: { synonym: "day2", similarity: "80%" },
-        },
-        {
-          word: "night",
-          synonym1: { synonymWord: "night1", similarity: "100%" },
-          synonym2: { synonym: "night2", similarity: "80%" },
-        },
-        {
-          word: "mama",
-          synonym1: { synonymWord: "mama1", similarity: "100%" },
-          synonym2: { synonym: "mama2", similarity: "80%" },
         },
       ]);
     }
@@ -168,21 +195,28 @@ const Play = (props) => {
   };
 
   const updateScore = () => {
-    if (inputValue === randWord) {
+    if (inputValue === randWord.synonymWord) {
+      return setScore((prev) => prev + 1);
+    } else if (inputValue === randWord.synonymWord2) {
+      return setScore((prev) => prev + 1);
+    } else if (inputValue === randWord.synonymWord3) {
+      return setScore((prev) => prev + 1);
+    } else if (inputValue === randWord.synonymWord4) {
       return setScore((prev) => prev + 1);
     }
     return score;
   };
 
   const updateRandWord = () => {
-    const newRandWord = nouns2[randNum].word;
+    const newRandWord = nouns2[randNum].mainWord;
     setRandWord(newRandWord);
   };
 
   const newArr = (e) => {
     e.preventDefault();
-    updateRandWord();
+    console.log(randWord);
     updateScore();
+    updateRandWord();
     setInputValue("");
   };
 

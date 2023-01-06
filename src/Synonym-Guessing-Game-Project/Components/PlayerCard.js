@@ -51,6 +51,7 @@ function PlayerCard(props) {
                 value={props.value}
                 id="fullWidth"
                 disabled={false}
+                autoComplete="off"
               ></TextField>
               <Grid>
                 <Button disabled={false} variant="danger" type="submit">
@@ -66,20 +67,28 @@ function PlayerCard(props) {
 
   return (
     <div className="PlayerCard">
-      <Grid container spacing={3}>
-        <Grid xs={2}>
+      <Grid
+        container
+        spacing={2}
+        style={{ display: "flex", justifyContent: "center" }}
+      >
+        <Grid
+          xs={10}
+          sm={6}
+          style={{ display: "flex", justifyContent: "center" }}
+        >
           <div className="result">
-            <span>Correct Answers:</span>
+            <span>Correct Answers: </span>
             <p>{props.score}</p>
           </div>
         </Grid>
-        <Grid xs={8}>
+        <Grid xs={10} sm={8}>
           <div className="Counter">
             <div className="timer-wrapper">
               <CountdownCircleTimer
                 key={key}
                 isPlaying
-                duration={600}
+                duration={30}
                 colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
                 colorsTime={[7, 5, 2, 0]}
                 onComplete={() => [true, 1000]}
@@ -90,9 +99,13 @@ function PlayerCard(props) {
             </div>
           </div>
         </Grid>
-        <Grid xs={2}>
+        <Grid
+          xs={10}
+          sm={6}
+          style={{ display: "flex", justifyContent: "center" }}
+        >
           <div className="result">
-            <span>All Time High:</span>
+            <span>All Time High: </span>
             <p>{props.score}</p>
           </div>
         </Grid>

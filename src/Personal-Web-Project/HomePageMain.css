@@ -1,16 +1,18 @@
 .mobileMain{
     max-width: 100%!important;
     overflow-x: hidden!important;
+    scroll-behavior: smooth;
 }
 
 .homePageMainWhite {
-    height: 410vh;
+    height: 500vh;
     background-color: #141A1F;
+ 
 }
 
 .homePageMainBlack{
-    height: 410vh;
-    background-color: white;
+    height: 500vh;
+    background-color: #efefef;
 }
 
 .homePageMain-mainLogo{
@@ -54,99 +56,13 @@
     margin-top: 2em;
 }
 
- .homePageMain-s3-line{
-    border-radius: 5%;
-    height: 1px;
-    background-color: #376DDF;
-}
-
-.homePageMain-s3Black{
-    display: grid;
-    justify-content: center;
-    margin-left: 10px;
-    font-size: 60px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 500;
-    line-height: 1.1em;
-}
-
-.homePageMain-s3Black p{
-    color: black;
-}
-
-.homePageMain-s3White{
-    display: grid;
-    justify-content: center;
-    margin-left: 10px;
-    font-size: 60px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 500;
-    line-height: 1.1em;
-}
-
-.homePageMain-s3-logos-rightWhite{
-    color: white;
-}
-
-.homePageMain-s3-logos-rightBlack{
-    color: black;
-}
-
-.homePageMain-s3White p{
-    color: white;
-}
-
-.homePageMain-s3White span{
-    color: #376DDF;
-}
-
-.homePageMain-s3Black span{
-    color: #376DDF;
-}
-
-#h4Black{
-    color: #202020;
-    font-weight: 400;
-}
-
-#h4White{
-    color: white;
-    font-weight: 400;
-}
-
-.homePageMain-s3-text{
-    padding-bottom: 20px;
-}
-
-.homePageMain-s3-text-rightBlack p{
-    width: 80%;
-    color: black;
-    font-size: 20px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-.homePageMain-s3-text-rightWhite p{
-    width: 80%;
-    color: white;
-    font-size: 20px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-.homePageMain-s3-icons-right{
-    margin-left: 2em;
-}
 
 .homePageMain-s5White{
     color: black;
 }
 
 .homePageMain-s5White h4{
-    color: white;
-    font-size: 2.5em;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-.homePageMain-s5Black h4{
+    text-align: center;
     color: black;
     font-size: 2.5em;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -158,62 +74,58 @@
     align-items: center;
     width: 6em;
     height: 2em;
-    background-color: #F0F0F0;
+    background-color: #efefef;
     border-radius: 10%;
     margin-left: 0.5em;
     text-align: center;
     color: #376DDF;
 }
 
-.skillsIcons div{
-    display: flex;
-    align-items: center;
+.contactFormBoxBlack{
+    background-color: #efefef;
+    height: 90%;
 }
 
-.skillsIcons img{
-    display: block;
-    text-align: left; 
+.footer-imgs{
+    margin: 1em;
 }
 
-#fullName, #email, #message{
-    color: white;
-}
 
-#fullNameW, #emailW, #messageW{
+#from_name, #email, #message{
     color: black;
 }
 
 @media (max-width: 600px){
 
     .homePageMainWhite {
-        height: 600vh;
+        height: 450vh;
     }
     
     .homePageMainBlack{
-        height: 600vh;
+        height: 450vh;
     }
 
     .homePageMain-mainLogo{
-        visibility: hidden;
-        height: 1px;
+        display: none;
     }
 
-    .ellipsesMain img{
-        display: flex;
-        overflow: hidden;
+    .ellipsesMain{
+        height: 70vh;
+        display: block;
     }
 
     .homePageMain-h2-white{
         display: grid;
-        margin-left: 2%;
+        margin-left: 25%;
         margin-top: 2em;
         margin-bottom: -400px;
         color: white;
+
     }
     
     .homePageMain-h2-black{
         display: grid;
-        margin-left: 2%;
+        margin-left: 25%;
         margin-top: 2em;
         margin-bottom: -400px;
         color: #1E1E1E;
@@ -240,27 +152,10 @@
     margin-top: 2em;
     }
 
-    .homePageMain-s3White{
-        display: grid;
-        margin-left: 5px;
-        font-size: 30px;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-weight: 500;
-        line-height: 0.7em;
-        padding-bottom: 10px;
-    }
-
-    .homePageMain-s3Black{
-        display: grid;
-        margin-left: 5px;
-        font-size: 30px;
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-weight: 500;
-        line-height: 0.7em;
-    }
-
-    .homePageMain-s3-text{
-        padding-bottom: 10px;
+    .portofolioMobile{
+        display: none;
+        height: 0;
+        padding-bottom: 10%;
     }
 
     .homePageMain-s5White{
@@ -271,22 +166,17 @@
         font-size: 12px;
     }
 
-    .homePageMain-s3-text-rightWhite{
-        margin-left: 10%;
+    .contactMobile{
+        height: 85vh;
+        display: flex;
+        margin: auto;
+        padding-left: 7%;
+        padding-top: 5%;
     }
 
-    .homePageMain-s3-text-rightBlack{
-        margin-left: 10%;
+    .homePageMain-s5White h4{
+        font-size: 2em;
     }
-    
-    .homePageMain-s3-logos-rightWhite{
-        margin-left: 10%;
-    }
-
-    .homePageMain-s3-logos-rightBlack{
-        margin-left: 10%;
-    }
-
 }
 
 @media (min-width: 1000.98px){
@@ -294,3 +184,21 @@
         padding-left: 10em;
         height: 100%;
     }}
+
+@media(max-height: 700px){
+
+    .homePageMainWhite {
+        height: 550vh;
+    }
+    
+    .homePageMainBlack{
+        height: 550vh;
+    }
+    .ellipsesMain{
+        height: 100vh;
+    }
+
+        .contactMobile{
+            height: 110vh;
+        }
+}
