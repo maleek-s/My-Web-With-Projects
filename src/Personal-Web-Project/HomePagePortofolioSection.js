@@ -27,7 +27,7 @@ function PortofolioSection(props) {
         <h4 id={isDarkMode ? "s4-h4Black" : "s4-h4White"}>Portofolio</h4>
       </Grid>
       {/* Color Palettes Project */}
-      <Link to="/palette" style={{ textDecoration: "none" }}>
+      <Link to="/palette" style={{ textDecoration: "none", cursor: "default" }}>
         <Grid
           container
           spacing={2}
@@ -46,7 +46,11 @@ function PortofolioSection(props) {
                 onHoverStart={(e) => {}}
                 onHoverEnd={(e) => {}}
                 src={ColorPalettes}
-                style={{ border: "0.5px white solid", borderRadius: "1%" }}
+                style={{
+                  border: "0.5px white solid",
+                  borderRadius: "1%",
+                  cursor: "pointer",
+                }}
                 alt="Color Palettes App Preview"
               />
             </motion.div>
@@ -100,7 +104,10 @@ function PortofolioSection(props) {
         </Grid>
       </Link>
       {/* Synonym Guessing Game */}
-      <Link to="/synonym-game" style={{ textDecoration: "none" }}>
+      <Link
+        to="/synonym-game"
+        style={{ textDecoration: "none", cursor: "default" }}
+      >
         <Grid
           container
           spacing={2}
@@ -171,7 +178,11 @@ function PortofolioSection(props) {
                 onHoverStart={(e) => {}}
                 onHoverEnd={(e) => {}}
                 src={ColorPalettes}
-                style={{ border: "0.5px white solid", borderRadius: "1%" }}
+                style={{
+                  border: "0.5px white solid",
+                  borderRadius: "1%",
+                  cursor: "pointer",
+                }}
                 alt="Color Palettes App Preview"
               />
             </motion.div>

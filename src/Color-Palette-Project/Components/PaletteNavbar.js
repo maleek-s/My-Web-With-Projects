@@ -7,6 +7,7 @@ import NativeSelect from "@mui/material/NativeSelect";
 import Snackbar from "@mui/material/Snackbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+import { Button } from "react-bootstrap";
 
 class Navbar extends Component {
   constructor(props) {
@@ -55,6 +56,20 @@ class Navbar extends Component {
               <option value="rgb"> RGB </option>
               <option value="rgba"> RGBA </option>
             </NativeSelect>
+            <Link to="/palette" style={{ textDecoration: "none" }}>
+              <Button
+                variant="contained"
+                style={{
+                  display: "inline",
+                  marginBottom: "10px",
+                  marginTop: "10px",
+                }}
+                color="secondary"
+                size="small"
+              >
+                Go Back
+              </Button>
+            </Link>
           </div>
           <Snackbar
             anchorOrigin={{ vertical: "bottom", horizontal: "left" }}

@@ -1,6 +1,10 @@
 import React from "react";
 import MiniPalette from "./MiniPalette";
 import useStyles from "../styles/paletteListStyles";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import Typography from "@mui/material/Typography";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -8,6 +12,20 @@ import { motion } from "framer-motion";
 function PaletteList(props) {
   const { palettes } = props;
   const { classes } = useStyles();
+  const [open, setOpen] = React.useState(true);
+  const handleClose = () => setOpen(false);
+
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: "#efefef",
+    border: "2px solid #880808",
+    boxShadow: 24,
+    p: 4,
+  };
 
   return (
     <motion.div
@@ -46,6 +64,35 @@ function PaletteList(props) {
             </CSSTransition>
           ))}
         </TransitionGroup>
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+        >
+          <Fade in={open}>
+            <Box sx={style}>
+              <Typography
+                id="transition-modal-title"
+                variant="h6"
+                component="h2"
+              >
+                Welcome to my Color Palette Project
+              </Typography>
+              <Typography
+                id="transition-modal-title"
+                variant="h6"
+                component="h2"
+                sx={{ mt: 2 }}
+              >
+                Here you can copy any color HEX, RGB or RGBA code to use in your
+                own project. You can choose colors from my palettes, or you can
+                create a palette of your own.
+              </Typography>
+            </Box>
+          </Fade>
+        </Modal>
       </div>
     </motion.div>
   );
