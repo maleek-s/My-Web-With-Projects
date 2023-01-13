@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import ChickenPhoto from "./assets/ChickenPhoto.jpg";
+import Confetti from "react-confetti";
 import { Button, Col, Form, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function KokaIpo() {
   const [eggTry, setEggTry] = useState();
+  const [opacity, setOpacity] = useState(0);
 
   const handleAnswerCheck = (e) => {
     if (eggTry.toLowerCase() === "54") {
-      alert("mama");
+      alert("Look at you!");
+      setOpacity(1);
     } else {
-      alert("tata");
+      alert("Wrong!");
     }
   };
 
@@ -26,6 +29,11 @@ function KokaIpo() {
         backgroundColor: "#141A1F",
       }}
     >
+      <Confetti
+        width={window.innerWidth}
+        height={window.innerHeight}
+        opacity={opacity}
+      />
       <Stack gap={2} className="col-md-5 mx-auto">
         <Card className="text-center mt-4" text="dark">
           <Card.Img variant="top" src={ChickenPhoto} />

@@ -27,7 +27,11 @@ function PortofolioSection(props) {
         <h4 id={isDarkMode ? "s4-h4Black" : "s4-h4White"}>Portofolio</h4>
       </Grid>
       {/* Color Palettes Project */}
-      <Link to="/palette" style={{ textDecoration: "none", cursor: "default" }}>
+      <Link
+        to="/palette"
+        style={{ textDecoration: "none", cursor: "default" }}
+        className="pilotProjects-mobile"
+      >
         <Grid
           container
           spacing={2}
@@ -107,6 +111,7 @@ function PortofolioSection(props) {
       <Link
         to="/synonym-game"
         style={{ textDecoration: "none", cursor: "default" }}
+        className="pilotProjects-mobile"
       >
         <Grid
           container

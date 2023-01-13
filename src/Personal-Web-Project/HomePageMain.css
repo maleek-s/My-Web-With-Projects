@@ -169,7 +169,7 @@
     .contactMobile{
         height: 85vh;
         display: flex;
-        margin: auto;
+        margin-left: auto;
         padding-left: 7%;
         padding-top: 5%;
     }
