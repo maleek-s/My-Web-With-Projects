@@ -91,7 +91,7 @@ function HomePageMain(props) {
                 style={{ marginLeft: "1.5em" }}
                 onClick={() =>
                   openInNewTab(
-                    "https://drive.google.com/file/d/1cZJmLQ3a_dgXZk6NN2w-jRXffMoO6zcV/view?usp=sharing"
+                    "https://drive.google.com/file/d/1BUvpC60zVSzkZhacdQLODNPNhueWXhzg/view?usp=sharing"
                   )
                 }
               >

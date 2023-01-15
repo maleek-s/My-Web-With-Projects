@@ -11,6 +11,10 @@
     border-radius: 5%;
     height: 1px;
     background-color: #376DDF;
+} 
+
+.portofolioMobile{
+    padding-top: 5%
 }
 
 #s4-h4White{
@@ -53,6 +57,10 @@
     .homePageMain-s3-text{
         justify-content: center;
         padding-bottom: 10%;
+    }
+
+    .portofolioMobile{
+        padding-top: 30%
     }
 
     .pilotProjects-mobile{

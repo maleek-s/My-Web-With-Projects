@@ -6,6 +6,12 @@ import GitIcon from "./assets/GitIcon.svg";
 import JavaScriptIcon from "./assets/JavaScriptIcon.svg";
 import MaterialUIIcon from "./assets/MaterialUIIcon.svg";
 import ReactIcon from "./assets/ReactIcon.svg";
+import MongoIcon from "./assets/MongoIcon.svg";
+import BootstrapIcon from "./assets/BootstrapIcon.svg";
+import NodeIcon from "./assets/NodeIcon.svg";
+import FirebaseIcon from "./assets/FirebaseIcon.svg";
+import ExpressIcon from "./assets/ExpressIcon.svg";
+import MySqlIcon from "./assets/MySqlIcon.svg";
 import { motion } from "framer-motion";
 import "./HomePageSkills.css";
 
@@ -29,7 +35,7 @@ function SkillsSection(props) {
         </Grid>
       </Grid>
       <Grid container spacing={1} className="homePageMain-s3-text">
-        <Grid item xs={10} sm={8}>
+        <Grid item xs={10} sm={10} md={8}>
           <motion.div
             className={
               isDarkMode ? "homePageMain-s3White" : "homePageMain-s3Black"
@@ -47,7 +53,7 @@ function SkillsSection(props) {
             <p>a frontend developer</p>
           </motion.div>
         </Grid>
-        <Grid item xs={12} sm={4} pr={5} mt={6}>
+        <Grid item xs={12} sm={12} md={4} pr={5} mt={6}>
           <motion.div
             className={
               isDarkMode
@@ -80,7 +86,7 @@ function SkillsSection(props) {
                   HTML5
                 </div>
                 <div>
-                  <img src={JavaScriptIcon} alt="java Script Logo" />
+                  <img src={JavaScriptIcon} alt="Java Script Logo" />
                   JavaScript
                 </div>
                 <div>
@@ -92,21 +98,21 @@ function SkillsSection(props) {
                   React
                 </div>
                 <div>
-                  <img src={mainHTML} alt="HTML Logo" />
+                  <img src={NodeIcon} alt="Node JS Logo" />
                   NodeJS
                 </div>
                 <div>
-                  <img src={mainHTML} alt="HTML Logo" />
+                  <img src={ExpressIcon} alt="Express Logo" />
                   Express
                 </div>
               </Grid>
               <Grid className="skillsIcons" item xs={6}>
                 <div>
-                  <img src={mainHTML} alt="HTML Logo" />
+                  <img src={MySqlIcon} alt="MySQL Logo" />
                   MySQL
                 </div>
                 <div>
-                  <img src={mainHTML} alt="HTML Logo" />
+                  <img src={MongoIcon} alt="Mongo DB Logo" />
                   Mongo DB
                 </div>
                 <div>
@@ -114,7 +120,7 @@ function SkillsSection(props) {
                   Material UI
                 </div>
                 <div>
-                  <img src={mainHTML} alt="HTML Logo" />
+                  <img src={BootstrapIcon} alt="Bootstrap Logo" />
                   Bootstrap
                 </div>
                 <div>
@@ -122,8 +128,8 @@ function SkillsSection(props) {
                   Git
                 </div>
                 <div>
-                  <img src={mainHTML} alt="HTML Logo" />
-                  Bootstrap
+                  <img src={FirebaseIcon} alt="Firebase Logo" />
+                  Firebase
                 </div>
               </Grid>
             </Grid>

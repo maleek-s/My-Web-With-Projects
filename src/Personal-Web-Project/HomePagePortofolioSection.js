@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import MainArrow from "./assets/Arrow.svg";
 import ColorPalettes from "./assets/Color-Palettes.PNG";
+import SynonymGame from "./assets/Synonym-Game.PNG";
 import "./HomePageMain.css";
 import "./HomePagePortofolio.css";
 
@@ -19,7 +20,8 @@ function PortofolioSection(props) {
         justifyContent="flex-start"
         mr={1}
         ref={portofolioRef}
-        style={{ height: "2vh", paddingTop: "5%" }}
+        style={{ height: "2vh" }}
+        className="portofolioMobile"
       >
         <Grid item xs={7} sm={10} mr={2}>
           <div className="homePageMain-s4-line"></div>
@@ -135,14 +137,10 @@ function PortofolioSection(props) {
             >
               <h3>Synonym Guessing Game</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-                sed adipisci ullam veritatis earum accusantium quos. Cumque odit
-                dolores culpa inventore asperiores, commodi ut aliquam, nobis
-                quidem laboriosam debitis omnis. Maxime molestias rerum ipsam
-                quo, nostrum corrupti explicabo fuga velit vero quidem
-                reprehenderit dolorem eum illum, aliquam porro atque architecto!
-                Deserunt beatae repellendus veniam sint quod cumque illo
-                necessitatibus nihil.
+                This is a not so fun 1-player game where you try to guess the
+                synonym of a given word. If you get it right, you get a point.
+                Your all time high score is stored for you to beat. You have 30
+                seconds each time. The clock is ticking. Good luck!
               </p>
               <div style={{ display: "flex", marginTop: "2em" }}>
                 <div className="homePageMain-HCJ">HTML5</div>
@@ -182,7 +180,7 @@ function PortofolioSection(props) {
                 whileHover={{ scale: 1.05 }}
                 onHoverStart={(e) => {}}
                 onHoverEnd={(e) => {}}
-                src={ColorPalettes}
+                src={SynonymGame}
                 style={{
                   border: "0.5px white solid",
                   borderRadius: "1%",

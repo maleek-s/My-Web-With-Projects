@@ -38,6 +38,14 @@
     color: black;
 }
 
+.skillsIcons div{
+    margin-top: 0.8em;
+}
+
+.skillsIcons img{
+    margin-right: 0.5em;
+}
+
 .homePageMain-s3White p{
     color: white;
 }
@@ -86,7 +94,7 @@
     margin-left: 2em;
 }
 
-@media (max-width: 600px){
+@media (max-width: 1000px){
 
     .homePageMain-s3White{
         display: grid;
@@ -95,7 +103,7 @@
         font-size: 1.8em;
         font-weight: 500;
         text-align: center;
-        line-height: 1.5em;
+        line-height: 1.3em; 
     }
 
     .homePageMain-s3Black{
@@ -105,7 +113,7 @@
         font-size: 1.8em;
         font-weight: 500;
         text-align: center;
-        line-height: 1.5em;
+        line-height: 1.3em;
     }
 
     .homePageMain-s3-text{
@@ -116,14 +124,14 @@
         width: 100%;
         margin-left: 8%;
         padding-bottom: 10px;
-        line-height: 2.5em;
+        line-height: 3em;
     }
 
     .homePageMain-s3-text-rightBlack{
         width: 100%;
         margin-left: 8%;
         padding-bottom: 10px;
-        line-height: 2.5em;
+        line-height: 3em;
     }
 
     .homePageMain-s3-text-rightBlack p{
@@ -153,11 +161,12 @@
     .skillsIcons div{
         display: flex;
         justify-content: flex-start;
+        align-items: center;
         padding-bottom: 2px;
         padding-left: 20%;
     }
-
 }
+
 
 @media(max-height: 700px){
 

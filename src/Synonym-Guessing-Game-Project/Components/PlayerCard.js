@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 import "./PlayerCard.css";
 
 function PlayerCard(props) {
-  const [key, setKey] = useState(0);
   const [width, setWidth] = React.useState(window.innerWidth);
 
   const breakpoint = 800;
@@ -35,7 +34,7 @@ function PlayerCard(props) {
             exit={{ opacity: 1 }}
             className="randWord"
           >
-            <p>{props.randWord}</p>
+            <p>{props.randWord.mainWord}</p>
           </motion.div>
         </Grid>
         <Grid xs={12}>
@@ -53,7 +52,7 @@ function PlayerCard(props) {
                 disabled={false}
                 autoComplete="off"
               ></TextField>
-              <Grid>
+              <Grid display="flex" justifyContent="center">
                 <Button disabled={false} variant="danger" type="submit">
                   Feeling Lucky Punk?
                 </Button>
@@ -86,13 +85,13 @@ function PlayerCard(props) {
           <div className="Counter">
             <div className="timer-wrapper">
               <CountdownCircleTimer
-                key={key}
+                key={props.keyTimer}
                 isPlaying
-                duration={30}
+                duration={60}
                 colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
                 colorsTime={[7, 5, 2, 0]}
                 onComplete={() => [true, 1000]}
-                size={width >= breakpoint ? 500 : 350}
+                size={width >= breakpoint ? 400 : 300}
               >
                 {renderTime}
               </CountdownCircleTimer>
@@ -106,25 +105,15 @@ function PlayerCard(props) {
         >
           <div className="result">
             <span>All Time High: </span>
-            <p>{props.score}</p>
+            <p>{props.allScore}</p>
           </div>
         </Grid>
       </Grid>
       <div className="button-wrapper">
-        <Button onClick={() => setKey((prevKey) => prevKey + 1)}>
-          Restart Timer
-        </Button>
+        <Button onClick={props.restarTimer}>Restart Timer</Button>
       </div>
     </div>
   );
 }
 
 export default PlayerCard;
-
-// const getData = () => {
-//     Axios.get("http://localhost:3001/getSynonym").then((response) => {
-//         setListOfWords(response.data)
-//         let resultRandom = response.data[`${randNum}`];
-//         setListOfEveneventWords(resultRandom)
-//     });
-// };

@@ -27,6 +27,7 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-countdown-circle-timer": "^3.0.9",
     "react-dom": "^18.2.0",
+    "react-favicon": "^1.0.1",
     "react-material-ui-form-validator": "^3.0.1",
     "react-router-dom": "^6.4.3",
     "react-scripts": "^5.0.1",

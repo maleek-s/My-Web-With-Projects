@@ -10,7 +10,9 @@ import { Grid } from "@mui/material";
 function HomePage() {
   const isDarkModeState = JSON.parse(window.localStorage.getItem("isDarkMode"));
 
-  const [isDarkMode, setIsDarkMode] = useState(isDarkModeState);
+  const [isDarkMode, setIsDarkMode] = useState(
+    isDarkModeState === null ? "true" : isDarkModeState
+  );
   const [id, setId] = useState("");
 
   const handleScroll = (evt) => {

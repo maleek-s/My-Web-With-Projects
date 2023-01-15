@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes, useParams, useLocation } from "react-router-dom";
 import HomePage from "./Personal-Web-Project/HomePage";
+import KokaIpo from "./Personal-Web-Project/KokaIpo";
 import Play from "./Synonym-Guessing-Game-Project/Components/Play";
 import SynonymHome from "./Synonym-Guessing-Game-Project/Components/GameHome";
 import seedColors from "./Color-Palette-Project/Assets/seedColors.js";
@@ -8,9 +9,9 @@ import Palette from "./Color-Palette-Project/Components/Palette.js";
 import PaletteList from "./Color-Palette-Project/Components/PaletteList.js";
 import NewPaletteForm from "./Color-Palette-Project/Components/NewPaletteForm.js";
 import SingleColorPalette from "./Color-Palette-Project/Components/SingleColorPalette.js";
+import Page404 from "./Page404";
 import { generatePalette } from "./Color-Palette-Project/Assets/colorHelpers.js";
 import { AnimatePresence } from "framer-motion";
-import KokaIpo from "./Personal-Web-Project/KokaIpo";
 
 function AppRouter(props) {
   const location = useLocation();
@@ -59,7 +60,7 @@ function AppRouter(props) {
     <div>
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="*" element={<h1>404 Page</h1>}></Route>
+          <Route path="*" element={<Page404 />}></Route>
 
           <Route path="/" element={<HomePage />}></Route>
 

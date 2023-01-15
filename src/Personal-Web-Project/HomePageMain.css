@@ -177,25 +177,36 @@
         height: 85vh;
         display: flex;
         margin-left: auto;
-        padding-left: 7%;
+        padding-left: 9%;
         padding-top: 5%;
     }
 
     .homePageMain-s5White h4{
         font-size: 2em;
-        margin-left: 1.3em;
+        margin-left: 1.5em;
     } 
 
     #inputsMobile{
-        margin-left: 1.3em;
+        margin-left: 1.5em;
     }
 }
 
 @media (min-width: 1000.98px){
     .homePageMain-mainLogo img{
-        padding-left: 10em;
+        padding-left: 3em;
         height: 100%;
-    }}
+    }
+
+    .homePageMainWhite {
+        height: 650vh;
+    }
+    
+    .homePageMainBlack{
+        height: 650vh;
+    }
+
+}
+
 
 @media(max-height: 700px){
 
