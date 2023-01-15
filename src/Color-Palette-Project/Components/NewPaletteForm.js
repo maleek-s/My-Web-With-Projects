@@ -252,6 +252,7 @@ function NewPaletteForm({ maxColors = 20, ...props }) {
                 <div id="container-color-validator">
                   <TextValidator
                     size="small"
+                    label="Add Color Name"
                     onChange={handleChange}
                     value={newName}
                     validators={[
@@ -281,7 +282,6 @@ function NewPaletteForm({ maxColors = 20, ...props }) {
                 </div>
               </ValidatorForm>
             </div>
-            <Divider />
             <div id="container-savePalette">
               <ValidatorForm
                 onSubmit={handleSubmit}
@@ -291,7 +291,7 @@ function NewPaletteForm({ maxColors = 20, ...props }) {
                   style={{ marginBottom: "1em" }}
                   size="small"
                   onChange={handlePaletteNameChange}
-                  label="Palette Name"
+                  label="Add Palette Name"
                   value={newPaletteName}
                   validators={["required", "isPaletteNameUnique"]}
                   errorMessages={[
@@ -305,7 +305,7 @@ function NewPaletteForm({ maxColors = 20, ...props }) {
                   color="secondary"
                   type="submit"
                   style={{
-                    margin: "0 5px 0 20px",
+                    margin: "0 10px 0 40px",
                   }}
                 >
                   Save Palette

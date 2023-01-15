@@ -8,13 +8,18 @@ import { Link } from "react-router-dom";
 function KokaIpo() {
   const [eggTry, setEggTry] = useState();
   const [opacity, setOpacity] = useState(0);
+  const [disabledState, setDisabledState] = useState("false");
 
   const handleAnswerCheck = (e) => {
+    e.preventDefault();
     if (eggTry.toLowerCase() === "54") {
       alert("Look at you!");
       setOpacity(1);
+      setEggTry("");
+      setDisabledState("true");
     } else {
       alert("Wrong!");
+      setEggTry("");
     }
   };
 
@@ -39,17 +44,18 @@ function KokaIpo() {
           <Card.Img variant="top" src={ChickenPhoto} />
           <Card.Body>
             <Card.Text className="mb-2">
-              Koka i po za dan i po snese jaje i po. Koliko jaja snese 9 koka za
-              9 dana?
+              <p>Koka i po za dan i po snese jaje i po.</p>
+              <p>Koliko jaja snese 9 koka za 9 dana?</p>
             </Card.Text>
           </Card.Body>
         </Card>
-        <Form className="mt-4 text-center">
+        <Form onSubmit={handleAnswerCheck} className="mt-4 text-center">
           <Form.Group className="mb-3" controlId="kolikoJaja">
             <Form.Control
               className="text-center"
               placeholder="You have 0 clue"
               onChange={handleTryChange}
+              value={eggTry}
               autoComplete="off"
             />
             <Form.Text className="text-muted">
@@ -57,9 +63,15 @@ function KokaIpo() {
             </Form.Text>
           </Form.Group>
           <Col className="mb-4">
-            <Button variant="secondary" onClick={handleAnswerCheck}>
-              Submit and see
-            </Button>
+            {disabledState ? (
+              <Button variant="secondary" type="submit">
+                Submit and see
+              </Button>
+            ) : (
+              <Button variant="secondary" type="submit" disabled>
+                Submit and pee
+              </Button>
+            )}
           </Col>
           <Col>
             <Link to="/">

@@ -1,13 +1,20 @@
-.mobileMain{
+.mobileMainWhite{
     max-width: 100%!important;
-    overflow-x: hidden!important;
+    overflow-x: overlay!important;
     scroll-behavior: smooth;
+    background-color: #141A1F;
+}
+
+.mobileMainWhiteBlack{
+    max-width: 100%!important;
+    overflow-x: overlay!important;
+    scroll-behavior: smooth;
+    background-color: #efefef;
 }
 
 .homePageMainWhite {
     height: 500vh;
     background-color: #141A1F;
- 
 }
 
 .homePageMainBlack{
@@ -176,6 +183,11 @@
 
     .homePageMain-s5White h4{
         font-size: 2em;
+        margin-left: 1.3em;
+    } 
+
+    #inputsMobile{
+        margin-left: 1.3em;
     }
 }
 
@@ -188,17 +200,17 @@
 @media(max-height: 700px){
 
     .homePageMainWhite {
-        height: 550vh;
+        height: 650vh;
     }
     
     .homePageMainBlack{
-        height: 550vh;
+        height: 650vh;
     }
     .ellipsesMain{
         height: 100vh;
     }
 
-        .contactMobile{
-            height: 110vh;
-        }
+    .contactMobile{
+        height: 110vh;
+    }
 }

@@ -8,7 +8,9 @@ import { motion } from "framer-motion";
 import { Grid } from "@mui/material";
 
 function HomePage() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const isDarkModeState = JSON.parse(window.localStorage.getItem("isDarkMode"));
+
+  const [isDarkMode, setIsDarkMode] = useState(isDarkModeState);
   const [id, setId] = useState("");
 
   const handleScroll = (evt) => {
@@ -19,7 +21,12 @@ function HomePage() {
     setIsDarkMode(!isDarkMode);
   };
 
-  useEffect(() => {}, [isDarkMode]);
+  useEffect(() => {
+    const syncLocalStorageMode = () => {
+      window.localStorage.setItem("isDarkMode", JSON.stringify(isDarkMode));
+    };
+    syncLocalStorageMode();
+  }, [isDarkMode]);
 
   return (
     <motion.div
@@ -27,7 +34,7 @@ function HomePage() {
       animate={{ opacity: 1, transition: { duration: 1 } }}
       exit={{ opacity: 0, transition: { duration: 0.3 } }}
       style={{ display: "grid" }}
-      className="mobileMain"
+      className={isDarkMode ? "mobileMainWhite" : "mobileMainBlack"}
     >
       <Grid
         spacing={0}

@@ -106,6 +106,7 @@ function GetInTouch(props) {
             pt={3}
             display="flex"
             justifyContent="center"
+            id="inputsMobile"
           >
             <form
               onSubmit={sendEmail}
