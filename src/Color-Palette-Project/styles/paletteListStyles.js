@@ -29,6 +29,9 @@ const useStyles = makeStyles()((theme) => {
       justifyContent: "space-between",
       color: "white",
       alignItems: "center",
+      "@media (max-width: 575.98px)": {
+        display: "block",
+      },
     },
     topLinks: {
       marginRight: "2em",
@@ -40,6 +43,16 @@ const useStyles = makeStyles()((theme) => {
       },
       "&:hover": {
         color: "blue",
+      },
+      "@media (max-width: 575.98px)": {
+        marginBottom: "1em",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        "& a": {
+          border: "1px solid white",
+          padding: "2px",
+        },
       },
     },
     palettes: {
@@ -59,6 +72,10 @@ const useStyles = makeStyles()((theme) => {
       fontSize: "2rem",
       marginTop: "1.5rem",
       paddingTop: "1rem",
+      "@media (max-width: 575.98px)": {
+        display: "flex",
+        alignItems: "flex-start",
+      },
     },
   };
 });

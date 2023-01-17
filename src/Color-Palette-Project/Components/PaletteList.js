@@ -39,7 +39,7 @@ function PaletteList(props) {
           <h1 className={classes.heading}>Color Palettes</h1>
           <div className={classes.topLinks}>
             <Link to="/palette/new">Create Palette</Link>
-            <Link to="/">Back</Link>
+            <Link to="/">Go back</Link>
           </div>
         </nav>
         <TransitionGroup className={classes.palettes}>

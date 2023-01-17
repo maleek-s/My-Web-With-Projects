@@ -86,12 +86,7 @@ function GetInTouch(props) {
         }}
         className="contactMobile"
       >
-        <Grid
-          item
-          xs={10}
-          sm={5}
-          className={isDarkMode ? "contactFormBoxBlack" : "contactFormBoxWhite"}
-        >
+        <Grid item xs={10} sm={5} className="contactFormBoxBlack">
           <Grid item xs={10} sm={12} display="flex" justifyContent="center">
             <div className="homePageMain-s5White">
               <h4>Don't be a stranger.</h4>
