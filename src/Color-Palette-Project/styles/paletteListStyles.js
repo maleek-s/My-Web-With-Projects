@@ -5,13 +5,13 @@ const useStyles = makeStyles()((theme) => {
   return {
     root: {
       backgroundColor: "#020220",
-      height: "100vh",
+      height: "110vh",
       display: "flex",
       alignItems: "flex-start",
       justifyContent: "center",
       backgroundImage: `url(${bg})`,
       /* background by SVGBackgrounds.com */
-      overflow: "scroll",
+      overflow: "auto",
     },
     container: {
       width: "50%",

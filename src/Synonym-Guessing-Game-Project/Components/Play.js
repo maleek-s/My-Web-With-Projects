@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PlayerCard from "./PlayerCard";
 import Button from "react-bootstrap/Button";
+import HomePageFooter from "../../Personal-Web-Project/HomePageFooter";
 import { motion } from "framer-motion";
 import data from "../Assets/MyFakeDatabase.json";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -136,6 +137,7 @@ const Play = () => {
           ></PlayerCard>
         </motion.div>
       )}
+      <HomePageFooter></HomePageFooter>
     </motion.div>
   );
 };
