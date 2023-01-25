@@ -29,6 +29,7 @@ function KokaIpo() {
     <div
       style={{
         height: "100vh",
+        width: "100%",
         backgroundColor: "#141A1F",
       }}
     >
