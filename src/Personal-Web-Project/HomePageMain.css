@@ -1,25 +1,23 @@
 .mobileMainWhite{
     max-width: 100%!important;
-    overflow-x: overlay!important;
     scroll-behavior: smooth;
+    height: 100vh;
     background-color: #141A1F;
 }
 
-.mobileMainWhiteBlack{
+.mobileMainBlack{
     max-width: 100%!important;
-    overflow-x: overlay!important;
     scroll-behavior: smooth;
-    background-color: #efefef;
+    height: 100vh;
+    background-color: #efefef; 
 }
 
-.homePageMainWhite {
-    height: 500vh;
-    background-color: #141A1F;
+.homePageMainWhite{
+    max-width: 100%!important;
 }
 
 .homePageMainBlack{
-    height: 500vh;
-    background-color: #efefef;
+    max-width: 100%!important;
 }
 
 .homePageMain-mainLogo{
@@ -88,9 +86,14 @@
     color: #376DDF;
 }
 
-.contactFormBoxBlack{
+.contactMobile{
+    margin-bottom: 20px;
+    margin-left: 20px!important;
+}
+
+.contactFormBox{
     background-color: #efefef;
-    height: 90%;
+    height: 40em;
 }
 
 .footer-imgs{
@@ -102,37 +105,26 @@
     color: black;
 }
 
-@media (max-width: 600px){
-
-    .homePageMainWhite {
-        height: 450vh;
-    }
-    
-    .homePageMainBlack{
-        height: 450vh;
-    }
+@media (max-width: 1000px){
 
     .homePageMain-mainLogo{
         display: none;
     }
 
     .ellipsesMain{
-        height: 70vh;
+        height: 700px;
         display: block;
     }
 
     .homePageMain-h2-white{
         display: grid;
-        margin-left: 25%;
         margin-top: 2em;
         margin-bottom: -400px;
         color: white;
-
     }
     
     .homePageMain-h2-black{
         display: grid;
-        margin-left: 25%;
         margin-top: 2em;
         margin-bottom: -400px;
         color: #1E1E1E;
@@ -142,21 +134,25 @@
         font-size: 2.5em;
         font-family: 'Plus Jakarta Sans', sans-serif;
         font-weight: bold;
+        margin-left: 1rem;
     }
     
     .homePageMain-h2-black h2{
         font-size: 2.5em;
         font-family: 'Plus Jakarta Sans', sans-serif;
         font-weight: bold;
+        margin-left: 1rem;
     }
 
     .homePageMain-btns{
         margin-top: 1em;
+        margin-left: 1rem;
         display: flex;
     }
     
     .homePageMain-logos{
     margin-top: 2em;
+    margin-left: 1rem;
     }
 
     .portofolioMobile{
@@ -174,54 +170,18 @@
     }
 
     .contactMobile{
-        height: 85vh;
+        height: 650px;
         display: flex;
         margin-left: auto;
-        padding-left: 9%;
+        margin-left: 8%!important;
         padding-top: 5%;
     }
 
     .homePageMain-s5White h4{
         font-size: 2em;
-        margin-left: 1.5em;
     } 
 
     #inputsMobile{
         margin-left: 1.5em;
-    }
-}
-
-@media (min-width: 1000.98px){
-    .homePageMain-mainLogo img{
-        padding-left: 3em;
-        height: 100%;
-    }
-
-    .homePageMainWhite {
-        height: 650vh;
-    }
-    
-    .homePageMainBlack{
-        height: 650vh;
-    }
-
-}
-
-
-@media(max-height: 700px){
-
-    .homePageMainWhite {
-        height: 650vh;
-    }
-    
-    .homePageMainBlack{
-        height: 650vh;
-    }
-    .ellipsesMain{
-        height: 100vh;
-    }
-
-    .contactMobile{
-        height: 110vh;
     }
 }

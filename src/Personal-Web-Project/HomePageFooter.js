@@ -15,6 +15,7 @@ function HomePageFooter() {
         backgroundColor: "#1E1E1E",
         height: "8em",
         display: "block",
+        width: "inherit",
       }}
     >
       <div

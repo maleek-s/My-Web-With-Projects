@@ -1,9 +1,13 @@
 #AppBarStyleBlack{
     background-color: #141A1F;
+    max-width: 100%!important;
+    overflow-y: overlay!important;
 }
 
 #AppBarStyleWhite{
     background-color: #efefef;
+    max-width: 100%!important;
+    overflow-y: overlay!important;
 }
 
 .Navbar {
@@ -15,7 +19,6 @@
     margin: 0.7em;
     text-decoration: none;
     color: royalblue;
-  
 }
 
 .navBarBtns{

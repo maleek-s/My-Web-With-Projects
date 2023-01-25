@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
+import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
 
 function SynonymHome() {
@@ -41,6 +42,10 @@ function SynonymHome() {
       >
         <Fade in={open}>
           <Box sx={style}>
+            <CloseIcon
+              onClick={handleClose}
+              style={{ display: "flex", marginLeft: "auto" }}
+            />
             <Typography id="transition-modal-title" variant="h6" component="h2">
               Welcome to my Synonym Guessing Game Project
             </Typography>

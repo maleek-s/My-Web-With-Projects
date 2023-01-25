@@ -66,7 +66,8 @@ function GetInTouch(props) {
         mr={1}
         ref={contactRef}
         style={{
-          height: "5vh",
+          height: "10vh",
+          marginTop: "3rem",
           backgroundColor: isDarkMode ? "#141A1F" : "#efefef",
           marginRight: "0",
         }}
@@ -86,8 +87,8 @@ function GetInTouch(props) {
         }}
         className="contactMobile"
       >
-        <Grid item xs={10} sm={5} className="contactFormBoxBlack">
-          <Grid item xs={10} sm={12} display="flex" justifyContent="center">
+        <Grid item xs={10} sm={5} className="contactFormBox">
+          <Grid item xs={12} display="flex" justifyContent="center">
             <div className="homePageMain-s5White">
               <h4>Don't be a stranger.</h4>
               <h4> Get in touch.</h4>

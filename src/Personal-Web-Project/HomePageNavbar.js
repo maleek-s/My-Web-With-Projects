@@ -77,7 +77,10 @@ function Navbar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box
+      sx={{ display: "flex" }}
+      id={isDarkMode ? "AppBarStyleBlack" : "AppBarStyleWhite"}
+    >
       <AppBar
         component="nav"
         id={isDarkMode ? "AppBarStyleBlack" : "AppBarStyleWhite"}

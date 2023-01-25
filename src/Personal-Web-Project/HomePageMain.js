@@ -69,6 +69,7 @@ function HomePageMain(props) {
       <Grid
         container
         spacing={2}
+        mt={8}
         className={isDarkMode ? "homePageMainWhite" : "homePageMainBlack"}
         ref={homeRef}
       >

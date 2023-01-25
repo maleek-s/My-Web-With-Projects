@@ -47,19 +47,13 @@ function HomePage() {
             : { backgroundColor: "#efefef" }
         }
       >
-        <Grid item xs={12}>
-          <Navbar
-            handleDarkMode={handleDarkMode}
-            isDarkMode={isDarkMode}
-            handleScroll={handleScroll}
-          ></Navbar>
-        </Grid>
-        <Grid item xs={12} mt={10}>
-          <HomePageMain id={id} isDarkMode={isDarkMode}></HomePageMain>
-        </Grid>
-        <Grid item xs={12}>
-          <HomePageFooter></HomePageFooter>
-        </Grid>
+        <Navbar
+          handleDarkMode={handleDarkMode}
+          isDarkMode={isDarkMode}
+          handleScroll={handleScroll}
+        ></Navbar>
+        <HomePageMain id={id} isDarkMode={isDarkMode}></HomePageMain>
+        <HomePageFooter></HomePageFooter>
       </Grid>
     </motion.div>
   );

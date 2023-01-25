@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
+import CloseIcon from "@mui/icons-material/Close";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -65,15 +66,13 @@ function PaletteList(props) {
               </CSSTransition>
             ))}
           </TransitionGroup>
-          <Modal
-            aria-labelledby="transition-modal-title"
-            aria-describedby="transition-modal-description"
-            open={open}
-            onClose={handleClose}
-            closeAfterTransition
-          >
+          <Modal open={open} onClose={handleClose} closeAfterTransition>
             <Fade in={open}>
               <Box sx={style}>
+                <CloseIcon
+                  onClick={handleClose}
+                  style={{ display: "flex", marginLeft: "auto" }}
+                />
                 <Typography
                   id="transition-modal-title"
                   variant="h6"
