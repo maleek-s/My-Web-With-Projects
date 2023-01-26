@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Synonym-Home.css";
 import NavBar from "./GameNavBar";
 import Play from "./Play";
@@ -10,8 +10,23 @@ import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
 
 function SynonymHome() {
-  const [open, setOpen] = React.useState(true);
-  const handleClose = () => setOpen(false);
+  const [firstTime, setFirstTime] = React.useState(
+    localStorage.getItem("firstTime")
+  );
+  const [open, setOpen] = React.useState(firstTime === "1" ? false : true);
+
+  const handleClose = () => {
+    setOpen(false);
+    setFirstTime(1);
+  };
+
+  useEffect(() => {
+    if (localStorage.getItem("firstTime") === undefined) {
+      localStorage.setItem("firstTime", 0);
+    } else {
+      localStorage.setItem("firstTime", 1);
+    }
+  }, []);
 
   const style = {
     position: "absolute",

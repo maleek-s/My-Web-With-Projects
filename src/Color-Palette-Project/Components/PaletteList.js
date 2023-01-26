@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MiniPalette from "./MiniPalette";
 import useStyles from "../styles/paletteListStyles";
 import HomePageFooter from "../../Personal-Web-Project/HomePageFooter";
@@ -14,8 +14,25 @@ import { motion } from "framer-motion";
 function PaletteList(props) {
   const { palettes } = props;
   const { classes } = useStyles();
-  const [open, setOpen] = React.useState(true);
-  const handleClose = () => setOpen(false);
+  const [firstTimePalette, setFirstTimePalette] = React.useState(
+    localStorage.getItem("firstTimePalette")
+  );
+  const [open, setOpen] = React.useState(
+    firstTimePalette === "1" ? false : true
+  );
+
+  const handleClose = () => {
+    setOpen(false);
+    setFirstTimePalette(1);
+  };
+
+  useEffect(() => {
+    if (localStorage.getItem("firstTimePalette") === undefined) {
+      localStorage.setItem("firstTimePalette", 0);
+    } else {
+      localStorage.setItem("firstTimePalette", 1);
+    }
+  }, []);
 
   const style = {
     position: "absolute",

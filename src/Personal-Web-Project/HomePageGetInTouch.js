@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
+import CloseIcon from "@mui/icons-material/Close";
 import emailjs from "@emailjs/browser";
 import "./HomePageMain.css";
 
@@ -181,6 +182,10 @@ function GetInTouch(props) {
                 >
                   <Fade in={open}>
                     <Box sx={style}>
+                      <CloseIcon
+                        onClick={handleClose}
+                        style={{ display: "flex", marginLeft: "auto" }}
+                      />
                       <Typography
                         id="transition-modal-title"
                         variant="h6"
