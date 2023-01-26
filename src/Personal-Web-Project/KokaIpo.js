@@ -33,11 +33,7 @@ function KokaIpo() {
         backgroundColor: "#141A1F",
       }}
     >
-      <Confetti
-        width={window.innerWidth}
-        height={window.innerHeight}
-        opacity={opacity}
-      />
+      <Confetti width={window.innerWidth} height={400} opacity={opacity} />
       {opacity ? (
         <Col>
           {" "}
