@@ -18,27 +18,32 @@ function PortofolioSection(props) {
         spacing={2}
         display="flex"
         justifyContent="flex-start"
-        mr={1}
         ref={portofolioRef}
         style={{ height: "2vh" }}
         className="portofolioMobile"
       >
-        <Grid item xs={7} sm={10} mr={2}>
+        <Grid item xs={8} sm={10} pr={1}>
           <div className="homePageMain-s4-line"></div>
         </Grid>
         <h4 id={isDarkMode ? "s4-h4Black" : "s4-h4White"}>Portofolio</h4>
       </Grid>
       {/* Color Palettes Project */}
-      <Link
-        to="/palette"
-        style={{ textDecoration: "none", cursor: "default" }}
-        className="pilotProjects-mobile"
+      <Grid
+        container
+        spacing={2}
+        className="homePageMain-s4-text"
+        justifyContent="center"
       >
-        <Grid
-          container
-          spacing={2}
-          className="homePageMain-s3-text"
-          justifyContent="center"
+        <Link
+          to="/palette"
+          style={{
+            textDecoration: "none",
+            cursor: "default",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          className="pilotProjects-mobile"
         >
           <Grid item xs={9} sm={5} mt={6} className="portofolioMobile">
             <motion.div
@@ -61,7 +66,7 @@ function PortofolioSection(props) {
               />
             </motion.div>
           </Grid>
-          <Grid item xs={10} sm={5} pr={5} mt={6}>
+          <Grid item xs={10} sm={5} mt={6}>
             <motion.div
               className={
                 isDarkMode
@@ -107,22 +112,28 @@ function PortofolioSection(props) {
               </div>
             </motion.div>
           </Grid>
-        </Grid>
-      </Link>
+        </Link>
+      </Grid>
       {/* Synonym Guessing Game */}
-      <Link
-        to="/synonym-game"
-        style={{ textDecoration: "none", cursor: "default" }}
-        className="pilotProjects-mobile"
+      <Grid
+        container
+        spacing={2}
+        className="homePageMain-s4-text"
+        justifyContent="center"
+        style={{
+          backgroundColor: isDarkMode ? "#141A1F" : "#efefef",
+        }}
       >
-        <Grid
-          container
-          spacing={2}
-          className="homePageMain-s3-text"
-          justifyContent="center"
+        <Link
+          to="/synonym-game"
           style={{
-            backgroundColor: isDarkMode ? "#141A1F" : "#efefef",
+            textDecoration: "none",
+            cursor: "default",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
+          className="pilotProjects-mobile"
         >
           <Grid item xs={10} sm={5}>
             <motion.div
@@ -169,7 +180,13 @@ function PortofolioSection(props) {
               </div>
             </motion.div>
           </Grid>
-          <Grid item xs={9} sm={5} className="portofolioMobile">
+          <Grid
+            item
+            xs={9}
+            sm={5}
+            className="portofolioMobile"
+            id="portofolioMobile-2nd"
+          >
             <motion.div
               className="homePageMain-s4-photo"
               initial={{ opacity: 0 }}
@@ -190,8 +207,8 @@ function PortofolioSection(props) {
               />
             </motion.div>
           </Grid>
-        </Grid>
-      </Link>
+        </Link>
+      </Grid>
     </>
   );
 }

@@ -1,4 +1,9 @@
 
+.homePageMain-s4-text{
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
 .homePageMain-s4Black{
     background-color: #1E1E1E;
 }
@@ -14,11 +19,15 @@
 } 
 
 .portofolioMobile{
-    padding-top: 5%
+    align-items: center;
 }
 
 .pilotProjects-mobile{
-    margin-top: 150px;
+    margin-top: 50px;
+}
+
+#portofolioMobile-2nd img{
+    margin-left: 5em;
 }
 
 #s4-h4White{
@@ -33,7 +42,6 @@
 
 .homePageMain-s4-photo img{
     width: 80%;
-    margin-left: 3em;
 }
 
 .homePageMain-s4-text-rightBlack h3{
@@ -58,17 +66,18 @@
 
 @media (max-width: 1000px){
 
-    .homePageMain-s3-text{
+    .homePageMain-s4-text{
         justify-content: center;
         padding-bottom: 10%;
+        margin-left: 8%!important;
     }
 
     .portofolioMobile{
-        padding-top: 30%
+        display: none;
+        padding-top: 10%
     }
 
     .pilotProjects-mobile{
-        margin-left: auto;
         margin-top: 0;
     }
 
@@ -83,12 +92,12 @@
 
     .homePageMain-s4-text-rightWhite h3{
         text-align: center;
-        font-size: 35px;
+        font-size: 70px;
     }
 
     .homePageMain-s4-text-rightBlack h3{
         text-align: center;
-        font-size: 35px;
+        font-size: 70px;
     }
 
     .homePageMain-s4-text-rightWhite p{
@@ -99,6 +108,16 @@
         display: none;
     }
 
+}
+
+@media (max-width: 500px){
+    .homePageMain-s4-text-rightWhite h3{
+        font-size: 40px;
+    }
+
+    .homePageMain-s4-text-rightBlack h3{
+        font-size: 40px;
+    }
 }
 
 

@@ -33,7 +33,11 @@ function KokaIpo() {
         backgroundColor: "#141A1F",
       }}
     >
-      <Confetti width={window.innerWidth} height={400} opacity={opacity} />
+      <Confetti
+        width={window.innerWidth}
+        height={window.innerHeight}
+        opacity={opacity}
+      />
       {opacity ? (
         <Col>
           {" "}
@@ -60,8 +64,11 @@ function KokaIpo() {
             <Card.Img variant="top" src={ChickenPhoto} />
             <Card.Body>
               <Card.Text className="mb-2">
-                <p>Koka i po za dan i po snese jaje i po.</p>
-                <p>Koliko jaja snese 9 koka za 9 dana?</p>
+                <p>
+                  A chicken and a half lays an egg and a half in a day and a
+                  half.
+                </p>
+                <p>How many eggs will 9 chickens lay in 9 days?</p>
               </Card.Text>
             </Card.Body>
           </Card>

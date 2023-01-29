@@ -6,6 +6,7 @@ import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 import CloseIcon from "@mui/icons-material/Close";
 import emailjs from "@emailjs/browser";
+import "./HomePageSkills.css";
 import "./HomePageMain.css";
 
 function GetInTouch(props) {
@@ -64,17 +65,15 @@ function GetInTouch(props) {
         spacing={2}
         display="flex"
         justifyContent="flex-end"
-        mr={1}
         ref={contactRef}
         style={{
           height: "10vh",
           marginTop: "3rem",
           backgroundColor: isDarkMode ? "#141A1F" : "#efefef",
-          marginRight: "0",
         }}
       >
         <h4 id={isDarkMode ? "h4White" : "h4Black"}>Get in touch</h4>
-        <Grid item xs={7} sm={10} pl={10}>
+        <Grid item xs={6} sm={8} lg={10}>
           <div className="homePageMain-s3-line"></div>
         </Grid>
       </Grid>
@@ -88,7 +87,7 @@ function GetInTouch(props) {
         }}
         className="contactMobile"
       >
-        <Grid item xs={10} sm={5} className="contactFormBox">
+        <Grid item xs={10} sm={8} md={6} lg={4} className="contactFormBox">
           <Grid item xs={12} display="flex" justifyContent="center">
             <div className="homePageMain-s5White">
               <h4>Don't be a stranger.</h4>

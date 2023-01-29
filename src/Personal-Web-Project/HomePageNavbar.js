@@ -83,6 +83,7 @@ function Navbar(props) {
     >
       <AppBar
         component="nav"
+        position="fixed"
         id={isDarkMode ? "AppBarStyleBlack" : "AppBarStyleWhite"}
       >
         <Toolbar>
@@ -130,7 +131,7 @@ function Navbar(props) {
             </button>
           </Box>
 
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
             {navItems.map((item) => (
               <Button
                 key={item}
@@ -147,7 +148,7 @@ function Navbar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { md: "none" } }}
           >
             <MenuIcon />
           </IconButton>
@@ -163,7 +164,7 @@ function Navbar(props) {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", md: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: "100%",

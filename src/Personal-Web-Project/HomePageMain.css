@@ -107,10 +107,6 @@
 
 @media (max-width: 1000px){
 
-    .homePageMain-mainLogo{
-        display: none;
-    }
-
     .ellipsesMain{
         height: 700px;
         display: block;
@@ -155,12 +151,6 @@
     margin-left: 1rem;
     }
 
-    .portofolioMobile{
-        display: none;
-        height: 0;
-        padding-bottom: 10%;
-    }
-
     .homePageMain-s5White{
         font-size: 12px;
     }
@@ -183,5 +173,12 @@
 
     #inputsMobile{
         margin-left: 1.5em;
+    }
+}
+
+@media (max-width: 800px){
+
+    .homePageMain-mainLogo{
+        display: none;
     }
 }

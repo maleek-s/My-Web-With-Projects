@@ -30,12 +30,12 @@ function SkillsSection(props) {
         style={{ height: "15vh", marginTop: "3em" }}
       >
         <h4 id={isDarkMode ? "h4White" : "h4Black"}>Skills</h4>
-        <Grid item xs={9} sm={11} pl={10}>
+        <Grid item xs={9} sm={10}>
           <div className="homePageMain-s3-line"></div>
         </Grid>
       </Grid>
       <Grid container spacing={1} className="homePageMain-s3-text">
-        <Grid item xs={10} sm={10} md={8}>
+        <Grid item xs={12} md={9}>
           <motion.div
             className={
               isDarkMode ? "homePageMain-s3White" : "homePageMain-s3Black"
@@ -45,15 +45,13 @@ function SkillsSection(props) {
             transition={{ duration: 2 }}
             viewport={{ root: scrollRef }}
           >
-            <p>Over the last year and a</p>
-            <p>half I have been</p>
             <p>
-              <span>dedicated</span> on becoming
+              Over the last year and a half I have been
+              <span> dedicated</span> on becoming a frontend developer.
             </p>
-            <p>a frontend developer</p>
           </motion.div>
         </Grid>
-        <Grid item xs={12} sm={12} md={4} pr={5} mt={6}>
+        <Grid item xs={12} md={9} mt={6}>
           <motion.div
             className={
               isDarkMode
@@ -79,57 +77,109 @@ function SkillsSection(props) {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 2 }}
           >
-            <Grid container spacing={1}>
-              <Grid className="skillsIcons" item xs={6}>
+            <Grid
+              container
+              spacing={1}
+              style={{ display: "flex", justifyContent: "center" }}
+            >
+              <Grid id="skillsIconsLeft" item xs={5}>
                 <div>
-                  <img src={mainHTML} alt="HTML Logo" />
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={mainHTML}
+                    alt="HTML Logo"
+                  />
                   HTML5
                 </div>
                 <div>
-                  <img src={JavaScriptIcon} alt="Java Script Logo" />
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={JavaScriptIcon}
+                    alt="Java Script Logo"
+                  />
                   JavaScript
                 </div>
                 <div>
-                  <img src={CSSIcon} alt="CSS Logo" />
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={CSSIcon}
+                    alt="CSS Logo"
+                  />
                   CSS3
                 </div>
                 <div>
-                  <img src={ReactIcon} alt="React Logo" />
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={ReactIcon}
+                    alt="React Logo"
+                  />
                   React
                 </div>
                 <div>
-                  <img src={NodeIcon} alt="Node JS Logo" />
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={NodeIcon}
+                    alt="Node JS Logo"
+                  />
                   NodeJS
                 </div>
                 <div>
-                  <img src={ExpressIcon} alt="Express Logo" />
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={ExpressIcon}
+                    alt="Express Logo"
+                  />
                   Express
                 </div>
               </Grid>
-              <Grid className="skillsIcons" item xs={6}>
+              <Grid id="skillsIconsRight" item xs={5}>
                 <div>
-                  <img src={MySqlIcon} alt="MySQL Logo" />
                   MySQL
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={MySqlIcon}
+                    alt="MySQL Logo"
+                  />
                 </div>
                 <div>
-                  <img src={MongoIcon} alt="Mongo DB Logo" />
                   Mongo DB
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={MongoIcon}
+                    alt="Mongo DB Logo"
+                  />
                 </div>
                 <div>
-                  <img src={MaterialUIIcon} alt="Material UI Logo" />
                   Material UI
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={MaterialUIIcon}
+                    alt="Material UI Logo"
+                  />
                 </div>
                 <div>
-                  <img src={BootstrapIcon} alt="Bootstrap Logo" />
                   Bootstrap
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={BootstrapIcon}
+                    alt="Bootstrap Logo"
+                  />
                 </div>
                 <div>
-                  <img src={GitIcon} alt="Git Logo" />
                   Git
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={GitIcon}
+                    alt="Git Logo"
+                  />
                 </div>
                 <div>
-                  <img src={FirebaseIcon} alt="Firebase Logo" />
                   Firebase
+                  <motion.img
+                    whileHover={{ scale: 1.2 }}
+                    src={FirebaseIcon}
+                    alt="Firebase Logo"
+                  />
                 </div>
               </Grid>
             </Grid>
