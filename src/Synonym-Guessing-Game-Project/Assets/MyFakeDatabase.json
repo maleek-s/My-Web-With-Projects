@@ -1,0 +1,258 @@
+[
+	{
+		"id" : 7,
+		"mainWord" : "hot",
+		"synonymWord" : "blazing",
+		"synonymWord2" : "boiling",
+		"synonymWord3" : "heated",
+		"synonymWord4" : "humid"
+	},
+	{
+		"id" : 8,
+		"mainWord" : "cold",
+		"synonymWord" : "bitter",
+		"synonymWord2" : "bleak",
+		"synonymWord3" : "brisk",
+		"synonymWord4" : "chilled"
+	},
+	{
+		"id" : 9,
+		"mainWord" : "man",
+		"synonymWord" : "brother",
+		"synonymWord2" : "chap",
+		"synonymWord3" : "father",
+		"synonymWord4" : "fellow"
+	},
+	{
+		"id" : 10,
+		"mainWord" : "woman",
+		"synonymWord" : "daughter",
+		"synonymWord2" : "girl",
+		"synonymWord3" : "mother",
+		"synonymWord4" : "wife"
+	},
+	{
+		"id" : 12,
+		"mainWord" : "adorable",
+		"synonymWord" : "captivating",
+		"synonymWord2" : "charming",
+		"synonymWord3" : "cute",
+		"synonymWord4" : "delightful"
+	},
+	{
+		"id" : 13,
+		"mainWord" : "adventurous",
+		"synonymWord" : "adventuresome",
+		"synonymWord2" : "audacious",
+		"synonymWord3" : "bold",
+		"synonymWord4" : "courageous"
+	},
+	{
+		"id" : 15,
+		"mainWord" : "brave",
+		"synonymWord" : "adventurous",
+		"synonymWord2" : "audacious",
+		"synonymWord3" : "confident",
+		"synonymWord4" : "courageous"
+	},
+	{
+		"id" : 16,
+		"mainWord" : "confused",
+		"synonymWord" : "baffled",
+		"synonymWord2" : "befuddled",
+		"synonymWord3" : "bewildered",
+		"synonymWord4" : "dazed"
+	},
+	{
+		"id" : 17,
+		"mainWord" : "cooperative",
+		"synonymWord" : "collegial",
+		"synonymWord2" : "concerted",
+		"synonymWord3" : "coordinated",
+		"synonymWord4" : "harmonious"
+	},
+	{
+		"id" : 20,
+		"mainWord" : "awful",
+		"synonymWord" : "appalling",
+		"synonymWord2" : "atrocious",
+		"synonymWord3" : "depressing",
+		"synonymWord4" : "dire"
+	},
+	{
+		"id" : 21,
+		"mainWord" : "cloudy",
+		"synonymWord" : "dark",
+		"synonymWord2" : "dense",
+		"synonymWord3" : "dim",
+		"synonymWord4" : "dismal"
+	},
+	{
+		"id" : 22,
+		"mainWord" : "difficult",
+		"synonymWord" : "ambitious",
+		"synonymWord2" : "arduous",
+		"synonymWord3" : "burdensome",
+		"synonymWord4" : "challenging"
+	},
+	{
+		"id" : 23,
+		"mainWord" : "dull",
+		"synonymWord" : "boring",
+		"synonymWord2" : "dim",
+		"synonymWord3" : "dumb",
+		"synonymWord4" : "simple"
+	},
+	{
+		"id" : 24,
+		"mainWord" : "expensive",
+		"synonymWord" : "costly",
+		"synonymWord2" : "extravagant",
+		"synonymWord3" : "fancy",
+		"synonymWord4" : "high"
+	},
+	{
+		"id" : 25,
+		"mainWord" : "fancy",
+		"synonymWord" : "complicated",
+		"synonymWord2" : "decorative",
+		"synonymWord3" : "deluxe",
+		"synonymWord4" : "elegant"
+	},
+	{
+		"id" : 26,
+		"mainWord" : "filthy",
+		"synonymWord" : "disheveled",
+		"synonymWord2" : "grimy",
+		"synonymWord3" : "grubby",
+		"synonymWord4" : "grungy"
+	},
+	{
+		"id" : 27,
+		"mainWord" : "glamorous",
+		"synonymWord" : "alluring",
+		"synonymWord2" : "attractive",
+		"synonymWord3" : "captivating",
+		"synonymWord4" : "charismatic"
+	},
+	{
+		"id" : 28,
+		"mainWord" : "gorgeous",
+		"synonymWord" : "attractive",
+		"synonymWord2" : "bright",
+		"synonymWord3" : "brilliant",
+		"synonymWord4" : "colorful"
+	},
+	{
+		"id" : 30,
+		"mainWord" : "hilarious",
+		"synonymWord" : "amusing",
+		"synonymWord2" : "comical",
+		"synonymWord3" : "entertaining",
+		"synonymWord4" : "humorous"
+	},
+	{
+		"id" : 31,
+		"mainWord" : "impossible",
+		"synonymWord" : "absurd",
+		"synonymWord2" : "futile",
+		"synonymWord3" : "hopeless",
+		"synonymWord4" : "impassable"
+	},
+	{
+		"id" : 32,
+		"mainWord" : "kind",
+		"synonymWord" : "affectionate",
+		"synonymWord2" : "amiable",
+		"synonymWord3" : "charitable",
+		"synonymWord4" : "compassionate"
+	},
+	{
+		"id" : 33,
+		"mainWord" : "mysterious",
+		"synonymWord" : "baffling",
+		"synonymWord2" : "cryptic",
+		"synonymWord3" : "curious",
+		"synonymWord4" : "dark"
+	},
+	{
+		"id" : 34,
+		"mainWord" : "obedient",
+		"synonymWord" : "attentive",
+		"synonymWord2" : "compliant",
+		"synonymWord3" : "deferential",
+		"synonymWord4" : "devoted"
+	},
+	{
+		"id" : 35,
+		"mainWord" : "powerful",
+		"synonymWord" : "all-powerful",
+		"synonymWord2" : "authoritative",
+		"synonymWord3" : "capable",
+		"synonymWord4" : "compelling"
+	},
+	{
+		"id" : 36,
+		"mainWord" : "selfish",
+		"synonymWord" : "egotistical",
+		"synonymWord2" : "greedy",
+		"synonymWord3" : "narcissistic",
+		"synonymWord4" : "self-centered"
+	},
+	{
+		"id" : 37,
+		"mainWord" : "successful",
+		"synonymWord" : "fortunate",
+		"synonymWord2" : "fruitful",
+		"synonymWord3" : "happy",
+		"synonymWord4" : "lucky"
+	},
+	{
+		"id" : 38,
+		"mainWord" : "tasty",
+		"synonymWord" : "appetizing",
+		"synonymWord2" : "delectable",
+		"synonymWord3" : "flavorful",
+		"synonymWord4" : "luscious"
+	},
+	{
+		"id" : 39,
+		"mainWord" : "victorious",
+		"synonymWord" : "triumphant",
+		"synonymWord2" : "arrived",
+		"synonymWord3" : "champion",
+		"synonymWord4" : "conquering"
+	},
+	{
+		"id" : 40,
+		"mainWord" : "ugly",
+		"synonymWord" : "awful",
+		"synonymWord2" : "grisly",
+		"synonymWord3" : "grotesque",
+		"synonymWord4" : "hideous"
+	},
+	{
+		"id" : 41,
+		"mainWord" : "island",
+		"synonymWord" : "archipelago",
+		"synonymWord2" : "enclave",
+		"synonymWord3" : "isle",
+		"synonymWord4" : "islet"
+	},
+	{
+		"id" : 42,
+		"mainWord" : "annoying",
+		"synonymWord" : "aggravating",
+		"synonymWord2" : "bothersome",
+		"synonymWord3" : "disturbing",
+		"synonymWord4" : "irritating"
+	},
+	{
+		"id" : 43,
+		"mainWord" : "cruel",
+		"synonymWord" : "atrocious",
+		"synonymWord2" : "barbarous",
+		"synonymWord3" : "bitter",
+		"synonymWord4" : "brutal"
+	}
+]

@@ -1,0 +1,217 @@
+.homePageMain-s3Black {
+  display: flex;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  line-height: 1.1em;
+}
+
+.homePageMain-s3Black p {
+  color: black;
+}
+
+.homePageMain-s3White {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  line-height: 1.1em;
+}
+
+.homePageMain-s3-logos-rightWhite {
+  font-size: 20px;
+  color: white;
+}
+
+.homePageMain-s3-logos-rightBlack {
+  font-size: 20px;
+  color: black;
+}
+
+.homePageMain-s3White p {
+  color: white;
+}
+
+.homePageMain-s3White span {
+  color: #376ddf;
+}
+
+.homePageMain-s3Black span {
+  color: #376ddf;
+}
+
+.skillsBlack {
+  background-color: white;
+}
+
+.skillsWhite {
+  background-color: #141a1f;
+}
+
+#h4Black {
+  color: white;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+#h4White {
+  color: #202020;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.homePageMain-s3-text {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+
+.homePageMain-s3-text-rightBlack {
+  display: flex;
+  justify-content: center;
+}
+
+.homePageMain-s3-text-rightWhite {
+  display: flex;
+  justify-content: center;
+}
+
+.homePageMain-s3-text-rightBlack p {
+  width: 80%;
+  color: black;
+  font-size: 35px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.homePageMain-s3-text-rightWhite p {
+  width: 80%;
+  color: white;
+  font-size: 35px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.homePageMain-s3-icons-right {
+  margin-left: 2em;
+}
+
+#skillsIconsLeft {
+  text-align: right;
+  margin-right: 1em;
+}
+
+#skillsIconsRight {
+  text-align: left;
+  margin-left: 1em;
+}
+
+.single-card {
+  border-radius: 10px;
+  filter: drop-shadow(0 5px 10px 0 #ffffff);
+  width: 100%;
+  height: fit-content;
+  background-color: #141a1f;
+  padding: 10px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in;
+  color: white;
+}
+
+.single-card div {
+  display: inline-block;
+}
+
+.single-card img {
+  margin-right: 25px;
+  height: 45px;
+}
+
+.single-card h4 {
+  color: white;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.single-card p {
+    color: white;
+  }
+
+.single-card::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -15px;
+  right: -15px;
+  background: white;
+  height: 220px;
+  width: 25px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.4s ease-out;
+}
+
+
+
+@media (max-width: 1000px) {
+  .homePageMain-s3White {
+    display: block;
+    width: 100%;
+    font-size: 1.8em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.3em;
+  }
+
+  .homePageMain-s3Black {
+    display: block;
+    width: 100%;
+    font-size: 1.8em;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.3em;
+  }
+
+  .homePageMain-s3-text-rightWhite {
+    width: 100%;
+    padding-bottom: 10px;
+    line-height: 3em;
+  }
+
+  .homePageMain-s3-text-rightBlack {
+    width: 100%;
+    padding-bottom: 10px;
+    line-height: 3em;
+  }
+
+  .homePageMain-s3-text-rightBlack p {
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .homePageMain-s3-text-rightWhite p {
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .homePageMain-s3-logos-rightWhite {
+    font-size: 15px;
+  }
+
+  .homePageMain-s3-logos-rightBlack {
+    font-size: 15px;
+  }
+}
