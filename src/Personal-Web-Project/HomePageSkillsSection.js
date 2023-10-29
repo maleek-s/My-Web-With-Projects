@@ -65,7 +65,11 @@ function SkillsSection(props) {
           </motion.div>
         </Grid>
         <Grid item xs={9} md={8} lg={5} style={{ paddingLeft: "0px" }}>
-          <div class="single-card">
+          <div class={
+              isDarkMode
+                ? "single-card"
+                : "single-card-white"
+            }>
             <h4>Work experience</h4>
             <p>
               <ul>
@@ -91,7 +95,11 @@ function SkillsSection(props) {
           </div>
         </Grid>
         <Grid item xs={9} md={8} lg={5} style={{ paddingLeft: "0px" }}>
-          <div class="single-card">
+        <div class={
+              isDarkMode
+                ? "single-card"
+                : "single-card-white"
+            }>
             <h4>Technologies I worked with</h4>
 
             <div>
