@@ -1,0 +1,193 @@
+.centered {
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.wrapper {
+  height: 300px;
+  width: 300px;
+  font-family: "Clicker Script", cursive;
+  position: relative; /* ensure children position relative to this */
+}
+
+.cloud {
+  background: #bda1b8;
+  width: 90px;
+  height: 30px;
+  -webkit-animation: clouds 50s infinite;
+  animation: clouds 50s infinite;
+  margin-left: 0;
+  position: relative; /* if needed */
+}
+
+.cloud::before {
+  border-radius: 50%;
+  box-shadow: 20px -20px 0 0 #bda1b8, 90px 0 0 0 #bda1b8,
+    60px -27px 0 8px #bda1b8;
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 48px;
+  left: -22px;
+  bottom: 0;
+  background: #bda1b8;
+}
+
+.cloud:nth-child(1) {
+  top: auto;
+  bottom: 10px;
+  opacity: 0.85;
+}
+.cloud:nth-child(2) {
+  right: auto;
+  left: 120px;
+  opacity: 0.5;
+}
+.cloud:nth-child(3) {
+  bottom: auto;
+  top: 10px;
+  right: auto;
+  left: 70px;
+  opacity: 0.75;
+}
+.cloud:nth-child(4) {
+  bottom: auto;
+  top: 10px;
+  right: auto;
+  left: -80px;
+  opacity: 0.65;
+}
+
+.moon {
+  height: 120px;
+  width: 120px;
+  background: #666666;
+  border-radius: 60px;
+  box-shadow: 0 0 60px 1px #444444;
+  position: relative;
+}
+
+.moon::before {
+  border-radius: 60px;
+  box-shadow: 10px -50px 0 0 #444, 50px 0 0 0 #444, 50px -37px 0 10px #444;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 30px;
+  bottom: 10px;
+  background: #444;
+}
+
+.cat {
+  background: #eeeeee;
+  height: 60px;
+  width: 60px;
+  bottom: 260px;
+  left: 20%;
+  transform: translateX(-50%);
+  z-index: 0;
+  position: absolute;
+  animation: cat-move 10s infinite ease-in-out;
+}
+
+.cat::before,
+.cat::after {
+  width: 0;
+  height: 0;
+  top: -10px;
+  position: absolute;
+  content: "";
+}
+
+.cat::before {
+  border-left: 0 solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #eee;
+  left: 0;
+}
+
+.cat::after {
+  border-right: 0 solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #eee;
+  right: 0;
+}
+
+.cat .eyes {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background: #333;
+  border-radius: 50%;
+  top: 15px;
+}
+
+.cat .eyes.left {
+  left: 12px;
+}
+.cat .eyes.right {
+  right: 12px;
+}
+
+.cat .mouth {
+  position: absolute;
+  height: 4px;
+  width: 60%;
+  background: #333;
+  border-radius: 0 0 30% 30%;
+  top: 28px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+@-webkit-keyframes clouds {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 100px;
+  }
+  50% {
+    margin-left: 0;
+  }
+  75% {
+    margin-left: 30px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@keyframes clouds {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 100px;
+  }
+  50% {
+    margin-left: 0;
+  }
+  75% {
+    margin-left: 30px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes cat-move {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -20px);
+  }
+}

@@ -1,0 +1,67 @@
+.Play-container {
+
+    height: 100vh;
+    text-align: center;
+    padding-top: 5em;
+    flex-wrap: wrap;
+    background-image: url("../../Color-Palette-Project/styles/background-main.svg");
+/* background by SVGBackgrounds.com */
+    overflow: hidden;
+}
+
+.Play-container h3,h4{
+    color: white
+}
+
+.Play-text{
+    width: 80%;
+    height: 40%;
+    padding: 1em;
+    margin: auto;
+    justify-content: center;
+    border: 3px solid white;
+    display:flow-root;
+    overflow: hidden;
+    color: white;
+}
+
+.Play-btn{
+    margin-top: 1em;
+}
+
+h3 span {
+    font-size: 0.8em;
+} 
+
+@media (min-width: 991.98px){
+    .Play-container {
+        height: 100vh;
+        padding-top: 2em;
+    }
+        
+    .Play-text{
+        height: 45%;
+    }
+    }
+
+@media (max-width: 600px){
+    .Play-container { 
+        height: 100vh;
+        padding-top: 2em;
+    }
+    
+    .Play-text{
+        height: 50%;
+    }
+    }
+
+    @media (max-width: 366.98px){
+        .Play-container {
+            height: 100vh;
+            padding-top: 2em;
+        }
+        
+        .Play-text{
+            height: 60%;
+        }
+        }

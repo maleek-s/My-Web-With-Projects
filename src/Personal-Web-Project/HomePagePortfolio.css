@@ -1,0 +1,131 @@
+
+.homePageMain-s4-text{
+    padding-top: 40px;
+}
+
+.homePageMain-s4Black{
+    background-color: #1E1E1E;
+}
+
+.homePageMain-s4White{
+    background-color: #efefef;
+}
+
+.homePageMain-s4-line{
+    border-radius: 5%;
+    height: 1px;
+    background-color: #376DDF;
+} 
+
+.portofolioMobile{
+    align-items: center;
+}
+
+.pilotProjects-mobile{
+    margin-top: 50px;
+}
+
+#portofolioMobile-2nd img{
+    margin-left: 5em;
+}
+
+.portBlack {
+    background-color: white;
+}
+
+.portWhite { 
+    background-color: #141A1F;
+}
+
+#s4-h4White{
+    color: white;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+#s4-h4Black{
+    color: #202020;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.homePageMain-s4-photo img{
+    width: 80%;
+}
+
+.homePageMain-s4-text-rightBlack h3{
+    font-size: 3.5em;
+    color: black;
+}
+
+.homePageMain-s4-text-rightWhite h3{
+    font-size: 3.5em;
+    color: white;
+}
+
+.homePageMain-s4-text-rightBlack p{
+    font-size: 1em;
+    color: black;
+}
+
+.homePageMain-s4-text-rightWhite p{
+    font-size: 1em;
+    color: white;
+}
+
+@media (max-width: 1000px){
+
+    .homePageMain-s4-text{
+        justify-content: center;
+    }
+
+    .portofolioMobile{
+        display: none;
+    }
+
+    .pilotProjects-mobile{
+        margin-top: 0;
+    }
+
+    .pilotProjects-mobile:nth-of-type(2n){
+        margin-top: 30px;
+    }
+
+    .homePageMain-s4-photo img {
+        width: 100%;
+        margin: auto;
+    }
+
+    .homePageMain-s4-text-rightWhite h3{
+        text-align: center;
+        font-size: 70px;
+    }
+
+    .homePageMain-s4-text-rightBlack h3{
+        text-align: center;
+        font-size: 70px;
+    }
+
+    .homePageMain-s4-text-rightWhite p{
+        display: none;
+    }
+
+    .homePageMain-s4-text-rightBlack p{
+        display: none;
+    }
+
+}
+
+@media (max-width: 500px){
+    .homePageMain-s4-text-rightWhite h3{
+        font-size: 40px;
+    }
+
+    .homePageMain-s4-text-rightBlack h3{
+        font-size: 40px;
+    }
+}
+
+

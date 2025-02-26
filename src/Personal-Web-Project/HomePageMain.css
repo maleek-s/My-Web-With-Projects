@@ -1,0 +1,279 @@
+.mobileMainWhite {
+  max-width: 100% !important;
+  scroll-behavior: smooth;
+  height: 100vh;
+  background-color: #141a1f;
+}
+
+.mobileMainBlack {
+  max-width: 100% !important;
+  scroll-behavior: smooth;
+  height: 100vh;
+  background-color: #efefef;
+}
+
+.homePageMainWhite {
+  max-width: 100% !important;
+}
+
+.homePageMainBlack {
+  max-width: 100% !important;
+}
+
+.homePageMain-mainLogo {
+  overflow: visible;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.homePageMain-h2-white {
+  display: grid;
+  justify-content: center;
+  margin-left: 1em;
+  margin-top: 7em;
+  color: white;
+}
+
+.homePageMain-h2-black {
+  display: grid;
+  justify-content: center;
+  margin-left: 1em;
+  margin-top: 7em;
+  color: #1e1e1e;
+}
+
+.homePageMain-h2-white h2 {
+  font-size: 2em;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+}
+
+.homePageMain-h2-black h2 {
+  font-size: 2em;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+}
+
+.homePageMain-btns {
+  margin-top: 3em;
+}
+
+.homePageMain-logos {
+  margin-top: 2em;
+}
+
+.homePageMain-s5White {
+  color: black;
+}
+
+.homePageMain-s5White h4 {
+  text-align: center;
+  color: black;
+  font-size: 2.5em;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.homePageMain-HCJ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6em;
+  height: 2em;
+  background-color: #efefef;
+  border-radius: 10%;
+  margin-left: 0.5em;
+  text-align: center;
+  color: #376ddf;
+}
+
+.contactFormBox {
+  background-color: #efefef;
+  height: 40em;
+}
+
+.footer-imgs {
+  margin: 1em;
+}
+
+#from_name,
+#email,
+#message {
+  color: black;
+}
+
+.form {
+  width: 340px;
+  height: 480px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  position: relative;
+}
+.form h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  color: #78788c;
+  border-bottom: 3px solid #78788c;
+}
+.form input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  border-bottom: 2px solid #bebed2;
+}
+.form input:focus {
+  border-bottom: 2px solid #78788c;
+}
+.form p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+.form button {
+  float: right;
+  padding: 8px 12px;
+  margin: 8px 0 0;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form button:hover {
+  background: #78788c;
+  color: #fff;
+}
+.form div {
+  content: "Hi";
+  position: absolute;
+  bottom: -15px;
+  right: -20px;
+  background: #50505a;
+  color: #fff;
+  width: 320px;
+  padding: 16px 4px 16px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 10px 10px 40px -14px #000;
+}
+.form span {
+  margin: 0 5px 0 15px;
+}
+
+@media (max-width: 1300px) {
+  .homePageMain-h2-white h2 {
+    font-size: 2.5em;
+  }
+  
+  .homePageMain-h2-black h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .ellipsesMain {
+    height: 700px;
+    display: block;
+  }
+
+  .homePageMain-h2-white {
+    display: grid;
+    margin-top: 2em;
+    margin-bottom: -400px;
+    color: white;
+  }
+
+  .homePageMain-h2-black {
+    display: grid;
+    margin-top: 2em;
+    margin-bottom: -400px;
+    color: #1e1e1e;
+  }
+
+  .homePageMain-h2-white h2 {
+    font-size: 1.5em;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bold;
+    margin-left: 0.8rem;
+    margin-right: 0.5rem;
+  }
+
+  .homePageMain-h2-black h2 {
+    font-size: 1.5em;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bold;
+    margin-left: 0.8rem;
+    margin-right: 0.5rem;
+  }
+
+  .homePageMain-h2-white h5 {
+    margin-left: 0.8rem;
+    margin-right: 0.5rem;
+  }
+
+  .homePageMain-h2-black h5 {
+    margin-left: 0.8rem;
+    margin-right: 0.5rem;
+  }
+
+  .homePageMain-btns {
+    margin-top: 1em;
+    margin-left: 1rem;
+    display: flex;
+  }
+
+  .homePageMain-logos {
+    margin-top: 2em;
+    margin-left: 1rem;
+  }
+
+  .homePageMain-s5White {
+    font-size: 12px;
+  }
+
+  .homePageMain-s5Black {
+    font-size: 12px;
+  }
+
+  .contactMobile {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .homePageMain-s5White h4 {
+    font-size: 2em;
+  }
+
+  #inputsMobile {
+    margin-left: 1.5em;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .homePageMain-mainLogo {
+    display: none !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .homePageMain-h2-white h5 {
+    display: none !important;
+  }
+
+  .homePageMain-h2-black h5 {
+    display: none !important;
+  }
+}

@@ -1,0 +1,28 @@
+.flip-container {
+    position: relative;
+    height: 50px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #dbd56e;
+    perspective: 1000px; /* Adds depth */
+  }
+  
+  .flip-text {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    background: -webkit-linear-gradient(25deg, #eee, #333);
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    transform-origin: center;
+  }
+
+  
+  
