@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import MainArrow from "./assets/Arrow.svg";
 import ColorPalettes from "./assets/Color-Palettes.PNG";
 import SynonymGame from "./assets/Synonym-Game.PNG";
 import RKHadzici from "./assets/Rk Hadzici.png";
 import ScandiTask from "./assets/ScandiTask.PNG";
 import Subtitling from "./assets/Subtitling.png";
+import JobsInTech from "./assets/JobsInTech.png";
 
 const projects = [
   {
@@ -14,8 +14,8 @@ const projects = [
     description:
       "My scraper searches for job posts on company websites and delivers them to you!",
     tech: ["JavaScript", "NodeJS", "React", "MongoDB"],
-    imgSrc: Subtitling,
-    link: "http://maleek.site/test",
+    imgSrc: JobsInTech,
+    link: "http://jobsintech.live/",
   },
   {
     title: "A Subtitling Company Website",
