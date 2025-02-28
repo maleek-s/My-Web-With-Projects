@@ -29,6 +29,13 @@ function HomePageMain(props) {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleClick = (e) => {
+    const section = e.currentTarget.getAttribute("data-section");
+    if (section) {
+      props.handleScroll(section);
+    }
+  };
+
   useEffect(() => {
     if (hasStartedFlipping) {
       const interval = setInterval(() => {
@@ -46,29 +53,7 @@ function HomePageMain(props) {
 
   const [text, setText] = useState(mainPhrase);
 
-  const { isDarkMode, id, visibleSection } = props;
-
-  const homeRef = useRef(null);
-  const skillsRef = useRef(null);
-  const portofolioRef = useRef(null);
-  const contactRef = useRef(null);
-
-  const homeScroll = () => homeRef.current.scrollIntoView();
-  const skillsScroll = () => skillsRef.current.scrollIntoView();
-  const portofolioScroll = () => portofolioRef.current.scrollIntoView();
-  const contactScroll = () => contactRef.current.scrollIntoView();
-
-  useEffect(() => {
-    if (id === "skills") {
-      skillsScroll();
-    } else if (id === "portofolio") {
-      portofolioScroll();
-    } else if (id === "contact") {
-      contactScroll();
-    } else if (id === "home") {
-      homeScroll();
-    }
-  }, [id]);
+  const { isDarkMode, id, visibleSection, contactRef } = props;
 
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noreferrer");
@@ -100,7 +85,7 @@ function HomePageMain(props) {
         style={{
           height: "4em", // Locks in container height so buttons don’t move
           textAlign: "center",
-          marginBottom: "clamp(1rem, 4vw, 2rem)", // Keeps spacing below
+          marginBottom: "clamp(1rem, 4vw, 1em)", // Keeps spacing below
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -135,12 +120,12 @@ function HomePageMain(props) {
           display: "flex",
           flexWrap: "wrap", // Allows better stacking on mobile
           gap: "clamp(0.5rem, 2vw, 1rem)", // Adjust gap dynamically
-          marginBottom: "clamp(1rem, 3vw, 2rem)",
+          marginBottom: "clamp(6rem, 3vw, 7rem)",
           justifyContent: "center",
           alignItems: "center",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
-      >   
+      >
         <Button
           variant="outlined"
           size="small"
@@ -150,35 +135,35 @@ function HomePageMain(props) {
           Get in Touch
         </Button>
         <div className="flex">
-        <Link
-          onClick={() =>
-            openInNewTab(
-              "https://ba.linkedin.com/in/malik-spahi%C4%87-175675201"
-            )
-          }
-          className="mr-2"
-        >
-          <motion.img
-            src={isDarkMode ? mainLinkedInDark : mainLinkedIn}
-            whileHover={{ scale: 1.1 }}
-            alt="LinkedIn"
-            style={{
-              width: "clamp(16px, 4vw, 20px)", // Dynamic icon sizing
-              height: "clamp(16px, 4vw, 20px)",
-            }}
-          />
-        </Link>
-         <Link onClick={() => openInNewTab("https://github.com/maleek-s")}>
-          <motion.img
-            src={isDarkMode ? mainGitHubDark : mainGitHub}
-            whileHover={{ scale: 1.1 }}
-            alt="GitHub"
-            style={{
-              width: "clamp(16px, 4vw, 20px)",
-              height: "clamp(16px, 4vw, 20px)",
-            }}
-          />
-        </Link>
+          <Link
+            onClick={() =>
+              openInNewTab(
+                "https://ba.linkedin.com/in/malik-spahi%C4%87-175675201"
+              )
+            }
+            className="mr-2"
+          >
+            <motion.img
+              src={isDarkMode ? mainLinkedInDark : mainLinkedIn}
+              whileHover={{ scale: 1.1 }}
+              alt="LinkedIn"
+              style={{
+                width: "clamp(16px, 4vw, 20px)", // Dynamic icon sizing
+                height: "clamp(16px, 4vw, 20px)",
+              }}
+            />
+          </Link>
+          <Link onClick={() => openInNewTab("https://github.com/maleek-s")}>
+            <motion.img
+              src={isDarkMode ? mainGitHubDark : mainGitHub}
+              whileHover={{ scale: 1.1 }}
+              alt="GitHub"
+              style={{
+                width: "clamp(16px, 4vw, 20px)",
+                height: "clamp(16px, 4vw, 20px)",
+              }}
+            />
+          </Link>
         </div>
       </div>
 
@@ -192,8 +177,10 @@ function HomePageMain(props) {
             transition={{ duration: 0.6, ease: "easeInOut" }}
             style={{
               position: "absolute",
-              bottom: "10px", // Adjusted for mobile
+              bottom: "clamp(3px, 4vw, 20px)", // Dynamically adjusts based on screen size
               transform: "translateX(-50%)",
+              zIndex: 2,
+              pointerEvents: "none",
             }}
           >
             <div

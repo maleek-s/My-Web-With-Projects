@@ -6,7 +6,7 @@ import SynonymGame from "./assets/Synonym-Game.PNG";
 import RKHadzici from "./assets/Rk Hadzici.png";
 import ScandiTask from "./assets/ScandiTask.PNG";
 import Subtitling from "./assets/Subtitling.png";
-import JobsInTech from "./assets/JobsInTech.png";
+import JobsInTech from "./assets/JobsInTech.png"; 
 
 const projects = [
   {

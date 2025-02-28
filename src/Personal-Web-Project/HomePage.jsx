@@ -44,7 +44,7 @@ function HomePage() {
           }
         });
       },
-      { threshold: 0.05 } // Lower threshold for better detection on mobile
+      { threshold: 0.15 } // Lower threshold for better detection on mobile
     );
     
 
@@ -127,6 +127,7 @@ function HomePage() {
           <HomePageMain
             visibleSection={visibleSection}
             isDarkMode={isDarkMode}
+            contactRef={contactRef}
           ></HomePageMain>
         </section>
 

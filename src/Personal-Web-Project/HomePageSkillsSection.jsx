@@ -139,7 +139,7 @@ function SkillsSection(props) {
                     <div className="mb-1 flex justify-between flex-row-reverse items-center w-full left-timeline">
                       <div className="order-1 w-5/12"></div>
                       <div className="order-1 w-5/12 px-1 py-2 text-right">
-                        <p className="mb-3 text-base text-yellow-300">
+                        <p className="mb-3 text-base text-red-600">
                           September 2015- June 2020
                         </p>
                         <h4
@@ -163,7 +163,7 @@ function SkillsSection(props) {
                     <div className="mb-1 flex justify-between items-center w-full right-timeline">
                       <div className="order-1 w-5/12"></div>
                       <div className="order-1  w-5/12 px-1 py-2 text-left">
-                        <p className="mb-3 text-base text-yellow-300">
+                        <p className="mb-3 text-base text-red-600">
                           June 2020- July 2021
                         </p>
                         <h4
@@ -188,7 +188,7 @@ function SkillsSection(props) {
                     <div className="mb-1 flex justify-between flex-row-reverse items-center w-full left-timeline">
                       <div className="order-1 w-5/12"></div>
                       <div className="order-1 w-5/12 px-1 2 text-right">
-                        <p className="mb-3 text-base text-yellow-300">
+                        <p className="mb-3 text-base text-red-600">
                           {" "}
                           July 2021- January 2025
                         </p>
@@ -216,7 +216,7 @@ function SkillsSection(props) {
                       <div className="order-1 w-5/12"></div>
 
                       <div className="order-1  w-5/12 px-1 py-2">
-                        <p className="mb-3 text-base text-yellow-300">
+                        <p className="mb-3 text-base text-red-600">
                           January 2025 - Present
                         </p>
                         <h4
