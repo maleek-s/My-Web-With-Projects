@@ -55,7 +55,7 @@ const projects = [
       "A CRUD application built for an IT company onboarding task. Uses React, PHP & MySQL to manage products in a database.",
     tech: ["React", "PHP", "MySQL"],
     imgSrc: ScandiTask,
-    link: "https://scandiweb.maleek.live/",
+    link: "https://scandiweb.maleek.site/",
   },
 ];
 
