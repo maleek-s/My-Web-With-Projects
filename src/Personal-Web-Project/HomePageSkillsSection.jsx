@@ -140,7 +140,7 @@ function SkillsSection(props) {
                       <div className="order-1 w-5/12"></div>
                       <div className="order-1 w-5/12 px-1 py-2 text-right">
                         <p className="mb-3 text-base text-red-600">
-                          September 2015- June 2020
+                        January 2025 - Present
                         </p>
                         <h4
                           className="mb-3 font-bold text-lg md:text-2xl"
@@ -148,7 +148,7 @@ function SkillsSection(props) {
                             color: isDarkMode ? "#fff" : "#000",
                           }}
                         >
-                          Youth Association of the SDA Party
+                          Monri Payments, Member of Payten
                         </h4>
                         <p
                           className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100"
@@ -156,7 +156,7 @@ function SkillsSection(props) {
                             color: isDarkMode ? "#fff" : "#000",
                           }}
                         >
-                          Secretary General of a Youth Political Organization
+                         Technical Support Specialist in E-comm
                         </p>
                       </div>
                     </div>
@@ -164,6 +164,32 @@ function SkillsSection(props) {
                       <div className="order-1 w-5/12"></div>
                       <div className="order-1  w-5/12 px-1 py-2 text-left">
                         <p className="mb-3 text-base text-red-600">
+                        July 2021- January 2025
+                        </p>
+                        <h4
+                          className="mb-3 font-bold text-lg md:text-2xl"
+                          style={{
+                            color: isDarkMode ? "#fff" : "#000",
+                          }}
+                        >
+                          AgentLocator, Canada
+                        </h4>
+                        <p
+                          className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100"
+                          style={{
+                            color: isDarkMode ? "#fff" : "#000",
+                          }}
+                        >
+                          Senior Support Representative for a SaaS Real-Estate
+                          Company
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mb-1 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                      <div className="order-1 w-5/12"></div>
+                      <div className="order-1 w-5/12 px-1 2 text-right">
+                        <p className="mb-3 text-base text-red-600">
+                          {" "}
                           June 2020- July 2021
                         </p>
                         <h4
@@ -185,39 +211,13 @@ function SkillsSection(props) {
                         </p>
                       </div>
                     </div>
-                    <div className="mb-1 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                      <div className="order-1 w-5/12"></div>
-                      <div className="order-1 w-5/12 px-1 2 text-right">
-                        <p className="mb-3 text-base text-red-600">
-                          {" "}
-                          July 2021- January 2025
-                        </p>
-                        <h4
-                          className="mb-3 font-bold text-lg md:text-2xl"
-                          style={{
-                            color: isDarkMode ? "#fff" : "#000",
-                          }}
-                        >
-                          AgentLocator, Canada
-                        </h4>
-                        <p
-                          className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100"
-                          style={{
-                            color: isDarkMode ? "#fff" : "#000",
-                          }}
-                        >
-                          Senior Support Representative for a SaaS Real-Estate
-                          Company
-                        </p>
-                      </div>
-                    </div>
 
                     <div className="mb-10 flex justify-between items-center w-full right-timeline">
                       <div className="order-1 w-5/12"></div>
 
                       <div className="order-1  w-5/12 px-1 py-2">
                         <p className="mb-3 text-base text-red-600">
-                          January 2025 - Present
+                        September 2015- June 2020
                         </p>
                         <h4
                           className="mb-3 font-bold  text-lg md:text-2xl text-left"
@@ -225,7 +225,7 @@ function SkillsSection(props) {
                             color: isDarkMode ? "#fff" : "#000",
                           }}
                         >
-                          Monri Payments, Member of Payten
+                          Youth Association of the SDA Party
                         </h4>
                         <p
                           className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100"
@@ -233,7 +233,7 @@ function SkillsSection(props) {
                             color: isDarkMode ? "#fff" : "#000",
                           }}
                         >
-                          Technical Support Specialist in E-comm
+                          Secretary General of a Youth Political Organization
                         </p>
                       </div>
                     </div>

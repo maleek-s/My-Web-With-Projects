@@ -7,6 +7,7 @@ import RKHadzici from "./assets/Rk Hadzici.png";
 import ScandiTask from "./assets/ScandiTask.PNG";
 import Subtitling from "./assets/Subtitling.png";
 import JobsInTech from "./assets/JobsInTech.png"; 
+import Monri from "./assets/Monri.png"
 
 const projects = [
   {
@@ -16,6 +17,14 @@ const projects = [
     tech: ["JavaScript", "NodeJS", "React", "MongoDB"],
     imgSrc: JobsInTech,
     link: "http://jobsintech.live/",
+  },
+  {
+    title: "Monri PSP Showroom",
+    description:
+      "I created a showroom for various Monri integration types and guides",
+    tech: ["JavaScript", "NodeJS", "React"],
+    imgSrc: Monri,
+    link: "https://malikmonri.web.app/",
   },
   {
     title: "A Subtitling Company Website",
